@@ -7,7 +7,7 @@ This repository is designed for practicing **basic operations on data structures
 ```plaintext
 /project-root
 ├── week-01/    # Exercises for week 1
-│   ├── exercise-01
+│   ├── exercise-01/
 │   ├── exercise-02/
 │   ├── ...
 │
