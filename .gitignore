@@ -1,0 +1,62 @@
+# Ignore CLion and JetBrains IDE specific files
+.idea/
+cmake-build-debug/
+cmake-build-release/
+cmake-build-*/
+
+# Ignore build and compiled files across all projects
+**/CMakeCache.txt
+**/CMakeFiles/
+**/CMakeScripts/
+**/Testing/
+**/cmake_install.cmake
+**/Makefile
+**/CMakeLists.txt.user
+**/build/
+**/dist/
+
+# Ignore compiled binaries and libraries
+**/*.o
+**/*.lo
+**/*.la
+**/*.al
+**/*.libs
+**/*.a
+**/*.so
+**/*.so.*
+**/*.dylib
+**/*.dll
+**/*.exe
+
+# Ignore precompiled headers
+**/*.gch
+**/*.pch
+
+# Ignore debug files
+**/*.dSYM/
+**/*.core
+**/*.stackdump
+
+# Ignore logs and crash reports
+**/*.log
+**/*.out
+**/*.diff
+**/*.patch
+
+# Ignore package manager files
+**/.vcpkg/
+**/conanbuildinfo.cmake
+**/conanbuildinfo.txt
+**/conaninfo.txt
+**/graph_info.json
+
+# Ignore miscellaneous unwanted files
+**/*.swp
+**/*~
+**/*.bak
+**/*.tmp
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore documentation and auto-generated files
+**/docs/doxygen/
