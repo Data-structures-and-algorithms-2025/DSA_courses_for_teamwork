@@ -6,7 +6,7 @@ int main(void) {
      * TODO: declare an arrays (no dynamic memory allocation needed)
      * TODO: fill the arrays with random values between [1, 10]
      * TODO: print the arrays
-     * TODO: calculate and print the number of prime number
+     * TODO: calculate and print the number of prime numbers
      */
     return 0;
 }
