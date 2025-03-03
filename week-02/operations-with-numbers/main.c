@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#include "algorithms/algorithms.h"
+#include "arrays/arrays.h"
 
 int main(void) {
     /**
@@ -8,5 +13,19 @@ int main(void) {
      * TODO: print the arrays
      * TODO: calculate and print the number of prime numbers
      */
+    int n;
+    scanf("%d", &n);
+    srand(time(0));
+    int a[n];
+    fillWithRandom(a, n, 1, 10);
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+        if (isPrime(a[i])) {
+            sum++;
+        }
+    }
+    printf("\n%d", sum);
+
     return 0;
 }
