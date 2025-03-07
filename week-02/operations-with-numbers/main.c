@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printArray(int n, int array);
+void printArray(int n, int array[]);
 
 void fillArrayWithNumbers(int n, int array[]);
 
