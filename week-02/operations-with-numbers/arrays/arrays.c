@@ -11,5 +11,7 @@ void fillWithRandom(int *array, int n, int start, int end) {
   }
 }
 void ArrayDeclar(int *array, int n){
-  malloc(n*sizeof(int));
+  for(int i=0;i<n;i++){
+    array[i]=0;
+  };
 }

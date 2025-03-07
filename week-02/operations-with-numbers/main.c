@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "arrays.h"
-#include "algorithm.h"
-#include "utils.h"
+#include "arrays/arrays.h"
+#include "algorithms/algorithms.h"
+#include "utils/utils.h"
 int main(void) {
     /**
      * TODO: read n from console - number of elements
@@ -13,7 +13,7 @@ int main(void) {
     int n;
     int k=0;
     scanf("%i",&n);
-    int array[n];
+    int array[100];
     ArrayDeclar(array,n);
     fillWithRandom(array,n,1,10);
     printArray(array,n);
