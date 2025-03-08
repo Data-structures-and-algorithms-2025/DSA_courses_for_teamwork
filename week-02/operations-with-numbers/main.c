@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printArray(int n, int array[]);
-void fillArrayWithNumbers(int n, int array[]);
-
-
 
 int main(void) {
     /**
@@ -16,13 +12,4 @@ int main(void) {
      */
     return 0;
 }
-void printArray(int n, int array[]) {
-    for(int i = 0; i < n; i++) {
-        printf("%d ", array[i]);
-    }
-}
-void fillArrayWithNumbers(int n, int array[]) {
-    for(int i = 0; i < n; i++) {
-        array[i] = rand() % (10 - 1) + 1;
-    }
-}
+
