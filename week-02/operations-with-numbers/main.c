@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 void printArray(int n, int array[]);
-
 void fillArrayWithNumbers(int n, int array[]);
 
 
@@ -19,7 +18,7 @@ int main(void) {
 }
 void printArray(int n, int array[]) {
     for(int i = 0; i < n; i++) {
-        printf("%d", array[i]);
+        printf("%d ", array[i]);
     }
 }
 void fillArrayWithNumbers(int n, int array[]) {
