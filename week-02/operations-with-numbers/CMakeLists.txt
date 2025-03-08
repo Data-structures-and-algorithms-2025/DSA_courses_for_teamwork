@@ -10,5 +10,4 @@ add_executable(operations-with-numbers main.c
         algorithms/algorithms.h
         utils/utils.c
         utils/utils.h
-        functions.c
-        functions.h)
+)
