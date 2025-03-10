@@ -4,6 +4,7 @@
 
 #include "algorithms.h"
 
+
 #include <math.h>
 
 bool isPrime(int number) {
