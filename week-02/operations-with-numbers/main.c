@@ -26,6 +26,6 @@ int main(void) {
             count++;
         }
     }
-    printf("Count of primes: ",count);
+    printf("Count of primes: %i",count);
     return 0;
 }
