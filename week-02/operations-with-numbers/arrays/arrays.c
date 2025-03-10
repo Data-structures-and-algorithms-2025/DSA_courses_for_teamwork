@@ -9,7 +9,6 @@
 
 void fillWithRandom(int *array, int n, int start, int end) {
     srand(time(0));
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
         array[i] = rand() % (end - start + 1);
-    }
 }
