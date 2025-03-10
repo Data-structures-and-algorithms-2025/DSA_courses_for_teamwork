@@ -15,7 +15,7 @@ int main(void) {
 
     int n ;
     int array[100];
-    int start =1 , end = 10;
+    int start = 1 , end = 10;
 
     scanf("%i", &n);
 
@@ -24,7 +24,7 @@ int main(void) {
 
     int count = 0;
     for(int i=0;i<n;i++) {
-        if(isPrime(n) == 1){
+        if(isPrime(array[i])){
             count++;
         }
     }

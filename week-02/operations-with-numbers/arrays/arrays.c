@@ -6,6 +6,6 @@
 
 void fillWithRandom(int *array, int n, int start, int end) {
     for (int i = 0; i < n; ++i) {
-        array[i] = (end - start) * rand() + start;
+        array[i] = rand() % (end - start + 1)   + start;
     }
 }
