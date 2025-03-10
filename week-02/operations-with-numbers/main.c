@@ -4,6 +4,7 @@
 
 #include "algorithms/algorithms.h"
 #include "arrays/arrays.h"
+#include "utils/utils.h"
 
 int main(void) {
     /**
@@ -18,9 +19,9 @@ int main(void) {
     srand(time(0));
     int a[n];
     fillWithRandom(a, n, 1, 10);
+    printArray(a, n);
     int sum = 0;
     for (int i = 0; i < n; i++) {
-        printf("%d ", a[i]);
         if (isPrime(a[i])) {
             sum++;
         }
