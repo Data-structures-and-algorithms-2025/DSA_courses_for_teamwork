@@ -3,6 +3,8 @@ project(operations-with-numbers C)
 
 set(CMAKE_C_STANDARD 23)
 
+include_directories(utils arrays algorithms)
+
 add_executable(operations-with-numbers main.c
         arrays/arrays.c
         arrays/arrays.h
