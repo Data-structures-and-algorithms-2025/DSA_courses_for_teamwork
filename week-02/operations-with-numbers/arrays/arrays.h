@@ -13,4 +13,5 @@
  * @param end - upper bound
  */
 
+void fillWithRandom(int *array, int n, int start, int end);
 #endif //OPERATIONS_WITH_NUMBERS_ARRAYS_H
