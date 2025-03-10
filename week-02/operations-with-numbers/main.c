@@ -30,5 +30,6 @@ int main(void) {
 
     printf("Ennyi prim szam van: %d",sum);
 
+
     return 0;
 }
