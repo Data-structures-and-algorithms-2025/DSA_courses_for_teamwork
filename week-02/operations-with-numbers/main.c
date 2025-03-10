@@ -22,6 +22,6 @@ int main(void) {
             sz++;
         }
     }
-    printf("Number of primes: %i", sz);
+    printf("\nNumber of primes: %i", sz);
     return 0;
 }
