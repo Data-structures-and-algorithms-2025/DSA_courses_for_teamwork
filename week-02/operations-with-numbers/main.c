@@ -10,6 +10,7 @@ int main(void) {
      * TODO: calculate and print the number of prime numbers
      */
 
+
     int n ;
     int *array;
 
@@ -26,8 +27,6 @@ int main(void) {
     }
 
     printf("Number of prime numbers: %d", count);
-
-
 
     return 0;
 }
