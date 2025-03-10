@@ -11,9 +11,12 @@ bool isPrime(int number) {
         return false;
     }
     if (number == 2) {
-        return  true;
+        return true;
     }
-    for (int i = 2; i < sqrt(number); i++) {
+    if (number % 2 == 0) {
+        return false;
+    }
+    for (int i = 3; i <= sqrt(number); i += 2) {
         if (number % i == 0) {
             return false;
         }
