@@ -15,8 +15,4 @@ void fillWithRandom(int *array, int n, int start, int end) {
     }
 }
 
-void printArray(int *array, int n) {
-    for(int i=0; i<n; i++) {
-    printf("%d ", array[i]);
-    }
-}
+
