@@ -12,3 +12,11 @@ bool isPrime(int number){
     }
     return true;
 }
+
+int primecount(int array[],int n) {
+    int count=0;
+    for(int i=0;i<n;i++) {
+        if(isPrime(array[i]))count++;
+    }
+    return count;
+}

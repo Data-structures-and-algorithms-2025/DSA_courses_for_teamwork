@@ -13,5 +13,6 @@
  * @return bool (true/false)
  */
 bool isPrime(int number);
+int primecount(int array[],int n);
 
 #endif //OPERATIONS_WITH_NUMBERS_ALGORITHMS_H
