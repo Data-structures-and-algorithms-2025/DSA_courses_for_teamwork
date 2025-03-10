@@ -9,6 +9,5 @@
  * @param array - pointer to array
  * @param n - number of elements
  */
-void printArray(int *array, int n);
 
 #endif //OPERATIONS_WITH_NUMBERS_UTILS_H
