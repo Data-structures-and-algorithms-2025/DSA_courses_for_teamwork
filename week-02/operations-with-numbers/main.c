@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+#include "arrays/arrays.h"
+#include "utils/utils.h"
+
 int main(void) {
     /**
      * TODO: read n from console - number of elements
@@ -10,5 +13,10 @@ int main(void) {
      */
     int n;
     scanf("%d", &n);
+    int arr[n];
+    fillWithRandom(arr,n,0,10);
+    printArray(arr,n);
+
+
     return 0;
 }
