@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include "algorithms/algorithms.h"
+#include "arrays/arrays.h"
+#include "utils/utils.h"
+
 
 int main(void) {
     /**
