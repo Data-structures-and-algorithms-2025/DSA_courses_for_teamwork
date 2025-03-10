@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
+    //
     /**
      * TODO: read n from console - number of elements
      * TODO: declare an arrays (no dynamic memory allocation needed)
@@ -8,5 +9,6 @@ int main(void) {
      * TODO: print the arrays
      * TODO: calculate and print the number of prime numbers
      */
+
     return 0;
 }
