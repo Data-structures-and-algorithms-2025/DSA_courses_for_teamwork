@@ -3,3 +3,21 @@
 //
 
 #include "arrays.h"
+
+#include <stdlib.h>
+#include <time.h>
+
+
+void fillWithRandom(int *array, int n, int start, int end) {
+  if (start > end) {
+    int temp = start;
+    start = end;
+    end = temp;
+  }
+
+  srand(time(NULL));
+
+  for(int i=0;i<n;i++) {
+    array[i] = (rand() % (end - start + 1)) + start;
+  }
+}
