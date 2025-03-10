@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "algorithms/algorithms.h"
+#include "arrays/arrays.h"
 #include "utils/utils.h"
 
 int main(void) {
@@ -13,10 +15,16 @@ int main(void) {
      * TODO: print the arrays
      * TODO: calculate and print the number of prime numbers
      */ int n;
-    array;
+    int *array;
+      int s=1,e=99;
+    fillWithRandom(array,n,s,e);
 
               printArray(*array,n);
-    srand(time(NULL));
-    int values=rand()%10+1;
+    int count=0;
+    for (int i=0;i<n;i++) {
+        if (isPrime(array[i])==1) {
+            count++;
+        }
+    }
     return 0;
 }
