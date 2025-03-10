@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 #include "algorithms/algorithms.h"
 #include "utils/utils.h"
@@ -14,8 +15,11 @@ int main(void) {
      */
     int number;
     int min=1, max=10;
+    
     scanf("%d", &number);
     int array[number];
+
+    srand(time(NULL));
     fillWithRandom(array, number, min, max);
 
     printArray(array, number);
