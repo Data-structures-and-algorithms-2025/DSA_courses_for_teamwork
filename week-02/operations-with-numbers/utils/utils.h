@@ -11,4 +11,5 @@
  */
 void printArray(int *array, int n);
 
+
 #endif //OPERATIONS_WITH_NUMBERS_UTILS_H
