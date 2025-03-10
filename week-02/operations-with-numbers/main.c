@@ -19,6 +19,13 @@ int main(void) {
     int tomb[n];
     fillWithRandom(tomb,n,1,10);
     printArray(tomb,n);
-    isPrime(n);
+    int count=0;
+    for (int i=0;i<n;i++) {
+        int number=tomb[i];
+        if (isPrime(number)) {
+            count++;
+        }
+    }
+    printf("Count of primes: ",count);
     return 0;
 }
