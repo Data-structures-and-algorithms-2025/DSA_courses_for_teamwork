@@ -13,7 +13,7 @@ int main(void) {
      * TODO: calculate and print the number of prime numbers
      */
     int number;
-    int min=1, max=10000;
+    int min=1, max=10;
     scanf("%d", &number);
     int array[number];
     fillWithRandom(array, number, min, max);
