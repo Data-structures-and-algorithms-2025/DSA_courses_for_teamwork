@@ -8,5 +8,7 @@ int main(void) {
      * TODO: print the arrays
      * TODO: calculate and print the number of prime numbers
      */
+    int n;
+    scanf("%d", &n);
     return 0;
 }
