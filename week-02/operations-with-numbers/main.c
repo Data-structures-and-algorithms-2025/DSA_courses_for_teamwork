@@ -24,7 +24,7 @@ int main(void) {
 
     printArray(array, number);
     int sum=0;
-    for(int i=0; i<=number; i++) {
+    for(int i=0; i<number; i++) {
       if(isPrime(array[i])) {
         sum += 1;
       }
