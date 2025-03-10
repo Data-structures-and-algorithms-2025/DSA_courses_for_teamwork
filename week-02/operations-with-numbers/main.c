@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include "arrays/arrays.h"
+#include "algorithms/algorithms.h"
+#include "utils/utils.h"
 
 int main(void) {
     /**
@@ -12,18 +14,19 @@ int main(void) {
 
 
     int n ;
-    int *array;
+    int array[100];
+    int start =1 , end = 10;
 
     scanf("%i", &n);
 
     fillWithRandom(array,  n, start,  end);
-    boolIsPrime(n);
     printArray(array, n);
 
     int count = 0;
-    for(int i=0;i<n;i++){
-      if(isPrime(n) == 1){
-        count++;
+    for(int i=0;i<n;i++) {
+        if(isPrime(n) == 1){
+            count++;
+        }
     }
 
     printf("Number of prime numbers: %d", count);
