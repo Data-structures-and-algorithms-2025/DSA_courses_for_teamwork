@@ -3,3 +3,13 @@
 //
 
 #include "arrays.h"
+
+#include <stdlib.h>
+#include <time.h>
+
+void fillWithRandom(int *array, int n, int start, int end) {
+    srand(time(NULL));
+    for (int i = 0; i < n; i++) {
+        array[i] =1/(float)(start+1+rand()%(end-start+1));
+    }
+}
