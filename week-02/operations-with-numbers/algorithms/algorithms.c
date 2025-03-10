@@ -1,7 +1,7 @@
 //
 // Created by palma on 2/23/2025.
 //
-
+#include <stdio.h>
 #include "algorithms.h"
 bool isPrime(int number){
   if(number<1){
