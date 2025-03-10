@@ -14,5 +14,6 @@
  */
 void fillWithRandom(int *array, int n, int start, int end);
 void printArray(int *array, int n);
+//ygbu
 
 #endif //OPERATIONS_WITH_NUMBERS_ARRAYS_H
