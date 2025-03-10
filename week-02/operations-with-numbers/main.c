@@ -10,6 +10,6 @@ int main(void) {
      * TODO: print the arrays
      * TODO: calculate and print the number of prime numbers
      */
-
+ 
     return 0;
 }
