@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <time.h>
-#include "utils.h"
-#include "algorithm.h"
-#include "array.h"
+#include "algorithms/algorithms.h"
+#include "utils/utils.h"
+#include "arrays/arrays.h"
 
 int main(void) {
     /**
@@ -16,7 +16,7 @@ int main(void) {
     int min=1, max=10000;
     scanf("%d", &number);
     int array[number];
-    fillWithRandom(array, number);
+    fillWithRandom(array, number, min, max);
 
     printArray(array, number);
     int sum=0;
