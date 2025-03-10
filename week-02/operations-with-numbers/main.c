@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <time.h>
 #include "utils.h"
+#include "algorithm.h"
+#include "array.h"
 
 int main(void) {
     /**
@@ -14,12 +16,16 @@ int main(void) {
     int min=1, max=10000;
     scanf("%d", &number);
     int array[number];
-    for (int i = 0; i < number; i++) {
-      array[i] = min + rand() % (max - min);
-    }
+    fillWithRandom(array, number);
 
     printArray(array, number);
-
+    int sum=0;
+    for(int i=0; i<=number; i++) {
+      if(isPrime(array[i])) {
+        sum += 1;
+      }
+    }
+    printf("ennyi primszam %d\n", sum);
 
     return 0;
 }
