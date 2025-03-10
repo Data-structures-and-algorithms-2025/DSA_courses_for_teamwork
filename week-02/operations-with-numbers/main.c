@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "algorithms.h"
-#include "utils.h"
-#include "arrays.h"
 
+#include "arrays.h"
+#include "algorithms.h"
 
 int main(void) {
     /**
@@ -15,14 +14,14 @@ int main(void) {
      */
     int n,sz=0;
     scanf("%i",&n);
-    int Array[n];
-    fillWithRandom(Array,n,1,10);
-    printArray(Array,n);
+    int array[n];
+    fillWithRandom(array,n,1,10);
+    printArray(array,n);
     for(int i=0; i<n; i++) {
-        if(isPrime(Array[i])) {
+        if(isPrime(array[i])) {
             sz++;
         }
     }
-    printf("Number of primes: %i",sz);
+    printf("Number of primes: %i", sz);
     return 0;
 }
