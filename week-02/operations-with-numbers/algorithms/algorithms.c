@@ -3,6 +3,7 @@
 //
 
 #include "algorithms.h"
+#include <stdbool.h>
 
 bool isPrime(int number){
     if (number<=1)return false;
