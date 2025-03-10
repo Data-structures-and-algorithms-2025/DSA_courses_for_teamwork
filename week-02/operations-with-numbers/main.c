@@ -2,6 +2,10 @@
 #include <time.h>
 #include <stdlib.h>
 
+#include "algorithms/algorithms.h"
+#include "arrays/arrays.h"
+#include "utils/utils.h"
+
 
 int main(void) {
     /**
@@ -22,40 +26,18 @@ int main(void) {
 
     // filling the array with random values
     srand(time(NULL));
-    for (int i = 0; i < n; i++)
-    {
-        array[i] = rand()%10+1;
-    }
+    fillWithRandom(&array, n, 1, 10);
 
     //printing the array
-    printf("\n");
-    for (int i =0; i <n; i++)
-    {
-        printf("%d ", array[i]);
-    }
-    printf("\n");
+    printArray(array, n);
 
     // calc and print the nr of primes
     int countPrime = 0;
 
     for (int i =0; i <n; i++)
     {
-        if (array[i]==2) countPrime++;
-        else if (array[i]>2)
-        {
-            bool found = 1;
-            for (int j =2; j*j <= array[i]; j++)
-            {
-                if (array[i]%j==0)
-                {
-                    found =0;
-                    break;
-                }
+        if (isPrime(array[i])) countPrime++;
 
-            }
-            if (found) countPrime++;
-
-        }
     }
     printf("There are %d prime numbers in the array.", countPrime);
 
