@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+#include "algorithms/algorithms.h"
+#include "arrays/arrays.h"
+#include "utils/utils.h"
+
 int main(void) {
     /**
      * TODO: read n from console - number of elements
@@ -8,5 +12,15 @@ int main(void) {
      * TODO: print the arrays
      * TODO: calculate and print the number of prime numbers
      */
+    int n;
+    scanf("%i",&n);
+    int array[n];
+    fillWithRandom(array,n,1,10);
+    printArray(array,n);
+    for(int i=0;i<=n;i++) {
+        if(isPrime(array[i])==true) {
+            
+        }
+    }
     return 0;
 }
