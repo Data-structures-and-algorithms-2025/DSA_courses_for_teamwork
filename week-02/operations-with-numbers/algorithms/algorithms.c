@@ -24,5 +24,6 @@ bool isPrime(int number)
             return false;
         }
     }
-    return  true;
+    return true;
+    
 }
