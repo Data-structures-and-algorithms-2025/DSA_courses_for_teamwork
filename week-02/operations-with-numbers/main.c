@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include "arrays.h"
+#include "utils.h"
+#include "algorithms.h"
 
 int main(void) {
     int n;
