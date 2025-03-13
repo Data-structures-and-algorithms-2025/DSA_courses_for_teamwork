@@ -3,8 +3,8 @@ project(operations-with-numbers C)
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_C_STANDARD 23)
 
-include_directories(arrays algorithms utils)
 
+include_directories(arrays algorithms utils)
 add_executable(operations-with-numbers main.c
         arrays/arrays.c
         arrays/arrays.h
