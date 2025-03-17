@@ -33,11 +33,12 @@ Adottak a következő product.h fájlban megadott függvény deklarációk. Impl
 Reads all details of a product, product must be passed by reference
 @param pProduct - pointer to a product
 */
-//void readProductDetails(Product_t *pProduct);
+void memoryAllocation()
+void readProductDetails(Product_t *pProduct);
 /**
 Prints all details of a product
 @param product
 */
-//void printProduct(Product_t product);
+void printProduct(Product_t product);
 
 #endif //PRODUCT_H
