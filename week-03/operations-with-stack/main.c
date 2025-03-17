@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include "int_stack/stack.h"
+
 int main(void)
 {
     /*Egy kezdetben üres, maximum 4 kapacitású verembe próbáljuk elhelyezni, ebben a sorrendben, az 1,2,3,4,5 számokat.
@@ -10,7 +12,7 @@ int main(void)
     //A vermet nem szabad bejárni!!!
     //A main-ben ne hivatkozz a struktúra mezőire!!!
 
-    Stack stack1;
+    Stack_t stack1;
     createStack(4,&stack1);
     push(&stack1,1); push(&stack1,2); push(&stack1,3); push(&stack1,4); push(&stack1,5);
     pop(&stack1); pop(&stack1);
