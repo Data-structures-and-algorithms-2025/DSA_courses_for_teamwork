@@ -35,14 +35,20 @@ int pop(Stack_t* stack) {
         stack->elements[stack->top--]=-1;
         return 0;
     }
-    else return -2;
+    else {
+        printf("A verem ures!");
+        return -2;
+    }
 }
 int peek(Stack_t stack) {
     if (!isEmpty(stack)) {
         return stack.elements[stack.top];
     }
-    else return -1;
+    else {
+        printf("A verem ures!");
+        return -1;
 }
+    }
 int size(Stack_t stack) {
     return stack.top;
 }
