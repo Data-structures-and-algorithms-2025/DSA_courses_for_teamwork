@@ -1,12 +1,19 @@
 #include <stdio.h>
+#include <>
+int main() {
+    Stack_t stack;
+    createStack(5, &stack);
 
-int main(void)
-{
-    /*1.	Hozz létre egy terméket, melynek a deklarálás pillanatában már adj kezdőértékeket. Minden mezőt tölts fel adattal.
-    Írd ki a termék adatait a képernyőre (printProduct).
-    2.	Hozz létre egy terméket, melynek adatait olvasd be állományból (readProductDetails).
-    Írd ki a termék adatait a képernyőre (printProduct).
-    */
+    push(&stack, 10);
+    push(&stack, 20);
+    push(&stack, 30);
 
+    printf("Top element: %d\n", peek(stack));
+    printf("Stack size: %d\n", size(stack));
+
+    printf("Popped element: %d\n", pop(&stack));
+    printf("Top element after pop: %d\n", peek(stack));
+
+    destroyStack(&stack);
     return 0;
 }
