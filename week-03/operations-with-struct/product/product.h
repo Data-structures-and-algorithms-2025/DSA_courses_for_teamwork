@@ -26,4 +26,23 @@ Prints all details of a product
 */
 //void printProduct(Product_t product);
 
+typedef struct Date{
+    int year, month, day;
+}Date_t;
+
+enum Category{FRUIT,VEGETABLE,DIARY,OTHER};
+
+typedef struct Product{
+    char name[30];
+    char barcode[10];
+    char supplier[50];
+    Date_t dateOfManufacture;
+    enum Category category;
+    int price;
+}Product_t;
+
+void readProductDetails(Product_t *pProduct);
+void printProduct(Product_t product);
+
+
 #endif //PRODUCT_H
