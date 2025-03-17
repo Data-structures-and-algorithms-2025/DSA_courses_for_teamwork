@@ -17,5 +17,5 @@ bool isEmpty(Stack_t stack);
 void push(Stack_t* stack, int item);
 int pop(Stack_t* stack);
 int peek(Stack_t stack);
-int size(Stack_t stack
+int size(Stack_t stack);
 #endif //STACK_H
