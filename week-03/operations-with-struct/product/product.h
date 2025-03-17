@@ -26,4 +26,7 @@ Prints all details of a product
 */
 //void printProduct(Product_t product);
 
+
+typedef struct{
+}Product_t;
 #endif //PRODUCT_H
