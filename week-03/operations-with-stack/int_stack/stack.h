@@ -1,7 +1,7 @@
 //
 // Created by oszti on 3/16/2025.
 //
-
+#include "stack.c"
 #ifndef STACK_H
 #define STACK_H
 /*Implementáld a veremmel kapcsolatos alapvető műveleteket: create, destroy, push, pop, peek, isFull, isEmpty. Ezeket a műveleteket az stack.h, stack.c és main.c fájlok segítségével valósítsd meg.
