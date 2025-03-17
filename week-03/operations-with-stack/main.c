@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include "product.h"
+
 int main(void)
 {
     /*Egy kezdetben üres, maximum 4 kapacitású verembe próbáljuk elhelyezni, ebben a sorrendben, az 1,2,3,4,5 számokat.
@@ -9,6 +11,9 @@ int main(void)
     d) Mennyi lesz a veremben található elemek összege a leírt műveletek elvégzése után?*/
     //A vermet nem szabad bejárni!!!
     //A main-ben ne hivatkozz a struktúra mezőire!!!
+
+
+    VEREM verem={};
 
     return 0;
 }

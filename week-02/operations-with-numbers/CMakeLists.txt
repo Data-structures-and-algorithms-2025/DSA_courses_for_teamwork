@@ -13,4 +13,6 @@ add_executable(operations-with-numbers main.c
         utils/utils.c
         utils/utils.h
         arrays/arrays.c
-        arrays/arrays.c)
+        arrays/arrays.c
+        ../../week-03/operations-with-stack/main.c
+        ../../week-03/operations-with-struct/main.c)
