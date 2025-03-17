@@ -8,26 +8,35 @@
 Definiálj egy Stack címkéjű struktúrát, amely egy egész számokat tartalmazó verem információit tárolja a következő mezők révén:
 •	capacity/kapacitás (az elemek maximális száma)
 •	top (a verem teteje – a legfelső elem pozíciója)
-•	items/elemek (egész számokat tartalmazó tömb)
-Adottak a következő stack.h fájlban megadott függvény deklarációk. Implementáld a függvényeket az stack.c fájlban.*/
+•	items/elemek (egész számokat tartalmazó tömb)*/
+
+
+typedef struct {
+    int capacity;
+    int top;
+    int *elemek;
+}Stack_t;
+
+
+/*Adottak a következő stack.h fájlban megadott függvény deklarációk. Implementáld a függvényeket az stack.c fájlban.*/
 /**
  * Initializing the capacity and size of stack,
  * allocating memory for the @elements array
  * @param capacity
  * @param stack
  */
-//void createStack(int capacity, Stack_t * stack);
+void createStack(int capacity, Stack_t * stack);
 /**
  * Deallocates the memory
  * @param stack
  */
-//void destroyStack(Stack_t* stack);
+void destroyStack(Stack_t* stack);
 /**
  * Checks whether the stack is full
  * @param stack
  * @return
  */
-//bool isFull(Stack_t stack);
+bool isFull(Stack_t stack);
 /**
  * Checks whether the stack is empty
  * @param stack
