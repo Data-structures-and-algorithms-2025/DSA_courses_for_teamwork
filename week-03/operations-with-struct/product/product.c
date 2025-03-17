@@ -20,6 +20,6 @@ void printProduct(Product_t Product) {
     printf("Supplier: %s \n", Product.supplier);
     printf("Date of manufacture: %d %d %d \n", Product.dateOfManufacture.year, Product.dateOfManufacture.month, Product.dateOfManufacture.day);
     printf("Category: %i ", Product.category);
-    //printf("\n");
-    printf("Exam result: %.2f \n", Product.price);
+    printf("\n");
+    printf("Price: %.2f \n", Product.price);
 }
