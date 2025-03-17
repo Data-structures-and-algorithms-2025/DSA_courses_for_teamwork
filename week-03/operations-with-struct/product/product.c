@@ -9,10 +9,36 @@
 
 void readProductDetails(Product_t *pProduct) {
     getchar();
-    printf("name:");
+    printf("name:\n");
     fgets(pProduct->name,sizeof(pProduct->name),stdin);
     pProduct->name[strcspn(pProduct->name,"\n")]='\0';
-
+    getchar();
+    printf("Barcode: \n");
+    fgets(pProduct->barcode,sizeof(pProduct->barcode),stdin);
+    pProduct->barcode[strcspn(pProduct->barcode,"\n")]='\0';
+    getchar();
+    printf("supplier:\n");
+    fgets(pProduct->supplier,sizeof(pProduct->supplier),stdin);
+    pProduct->supplier[strcspn(pProduct->barcode,"\n")]='\0';
+    getchar();
+    printf("date: year/month/day\n");
+    scanf("%d%d%d",&pProduct->dateOfManufacture.year,&pProduct->dateOfManufacture.month,&pProduct->dateOfManufacture.day);
+    printf("category: FRUITS/VEGETABLES/DIARY/OTHER\n");
+    char category[20];
+    if (strcmp(category,"FRUITS")==0) {
+        pProduct->category=FRUIT;
+    }
+    if (strcmp(category,"VEGETABLE")==0) {
+        pProduct->category=VEGETABLE;
+    }
+    if (strcmp(category,"DIARY")==0) {
+        pProduct->category=DIARY;
+    }
+    else {
+        pProduct->category=OTHER;
+    }
+    printf("price:\n");
+    scanf("%lf",&pProduct->price);
 }
 
 char *getproduct(category_t product) {
