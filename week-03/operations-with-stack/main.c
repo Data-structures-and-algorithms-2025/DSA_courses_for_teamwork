@@ -26,6 +26,6 @@ int main(void)
         pop(&stack);
     }
     printf("A veremben talalhato elemek osszege:%d", sum);
-
+    destroyStack(&stack);
     return 0;
 }

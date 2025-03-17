@@ -13,15 +13,14 @@ void createStack(int capacity, Stack_t * stack) {
     stack->top=0;
 }
 void destroyStack(Stack_t* stack) {
-    free(stack);
+    free(stack->elements);
 }
 bool isFull(Stack_t stack) {
     if (stack.top==stack.capacitiy){return true;}
     else {return false;}
 }
 bool isEmpty(Stack_t stack) {
-    if (stack.top==0){return true;}
-    else{return false;}
+    return !stack.top;
 }
 void push(Stack_t* stack, int item) {
     if (!isFull(*stack)) {
