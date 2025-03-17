@@ -28,7 +28,7 @@ typedef struct {
     char supplier[51];
     Date_t dateOfManufacture;
     enum Category category;
-    int price;
+    float price;
 }Product_t;
 
 /**
