@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "product/product.h"
 
 int main(void)
 {
@@ -7,6 +8,12 @@ int main(void)
     2.	Hozz létre egy terméket, melynek adatait olvasd be állományból (readProductDetails).
     Írd ki a termék adatait a képernyőre (printProduct).
     */
-
+    Product_t product;
+    readProductDetails(&product);
+    printProduct(product);
+    Product_t productFromFile;
+    freopen("input.txt", "r", stdin);
+    readProductDetails(&productFromFile);
+    printProduct(productFromFile);
     return 0;
 }
