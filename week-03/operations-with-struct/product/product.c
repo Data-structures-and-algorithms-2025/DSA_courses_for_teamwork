@@ -12,6 +12,7 @@ void readProductDetails(Product_t *pProduct) {
     printf("name:");
     fgets(pProduct->name,sizeof(pProduct->name),stdin);
     pProduct->name[strcspn(pProduct->name,"\n")]='\0';
+
 }
 
 char *getproduct(category_t product) {
