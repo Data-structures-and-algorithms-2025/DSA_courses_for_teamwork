@@ -29,7 +29,7 @@ int main(void) {
     printf("\nc) A szam a verem tetejen: %d\n",peek(stack));
     /// d) A veremben talalhato elemek osszege
     int x=stack.top, sum=0;
-    for (int i=0;i<x;++i) {
+    for (int i=0;i<=x;++i) {
         sum+=peek(stack);
         pop(&stack);
     }
