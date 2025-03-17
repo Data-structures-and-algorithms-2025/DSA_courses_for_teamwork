@@ -2,6 +2,25 @@
 // Created by oszti on 3/16/2025.
 //
 
+typedef struct {
+    int year;
+    int month;
+    int day;
+}Date_t;
+
+enum Category {
+    FRUIT, VEGETABLE, DIARY, OTHER;
+};
+
+typedef struct{
+    char name[31];
+    char barCode[11];
+    char supplier[51];
+    Date_t dateOfManufacture;
+    enum Category category;
+    float price;
+}Product_t;
+
 #ifndef PRODUCT_H
 #define PRODUCT_H
 /*Definiálj egy Product_t címkéjű struktúrát, ha a következő információkat tudjuk egy termékről:
@@ -19,11 +38,11 @@ Adottak a következő product.h fájlban megadott függvény deklarációk. Impl
 Reads all details of a product, product must be passed by reference
 @param pProduct - pointer to a product
 */
-//void readProductDetails(Product_t *pProduct);
+void readProductDetails(Product_t *pProduct);
 /**
 Prints all details of a product
 @param product
 */
-//void printProduct(Product_t product);
+void printProduct(Product_t product);
 
 #endif //PRODUCT_H
