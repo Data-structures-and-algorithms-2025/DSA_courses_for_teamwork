@@ -29,4 +29,7 @@ Prints all details of a product
 
 typedef struct{
 }Product_t;
+
+void readProductDetails(Product_t *pProduct);
+void printProduct(Product_t product);
 #endif //PRODUCT_H
