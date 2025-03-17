@@ -3,3 +3,8 @@
 //
 
 #include "product.h"
+#include<stdio.h>
+#include<stdlib.h>
+void readProductDetails(Product_t *pProduct) {
+
+}
