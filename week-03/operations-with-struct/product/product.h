@@ -15,15 +15,30 @@ o	egyszerűbb változat: csak yearOfManufacture
 •	price (a termék ára/ db vagy /kg)
 Adottak a következő product.h fájlban megadott függvény deklarációk. Implementáld a függvényeket a product.c fájlban.*/
 
+enum Category {FRUIT, VEGETABLE, DIARY, OTHER};
+
+typedef struct {
+    int year, month, day;
+} Date_t;
+
+typedef struct {
+    char name[31];
+    char barcode[11];
+    char supplier[51];
+    Date_t dateOfManufacture;
+    enum Category category;
+    float price;
+} Product_t;
+
 /**
 Reads all details of a product, product must be passed by reference
 @param pProduct - pointer to a product
 */
-//void readProductDetails(Product_t *pProduct);
+void readProductDetails(Product_t *pProduct);
 /**
 Prints all details of a product
 @param product
 */
-//void printProduct(Product_t product);
+void printProduct(Product_t product);
 
 #endif //PRODUCT_H
