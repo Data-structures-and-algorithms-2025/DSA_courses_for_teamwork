@@ -25,7 +25,7 @@ void readProductDetails(Product_t *pProduct) {
     scanf("%d%d%d",&pProduct->dateOfManufacture.year,&pProduct->dateOfManufacture.month,&pProduct->dateOfManufacture.day);
     printf("category: FRUITS/VEGETABLES/DIARY/OTHER\n");
     char category[20];
-    if (strcmp(category,"FRUITS")==0) {
+    if (strcmp(category,"FRUIT")==0) {
         pProduct->category=FRUIT;
     }
     if (strcmp(category,"VEGETABLE")==0) {
