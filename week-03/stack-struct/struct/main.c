@@ -1,7 +1,12 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-    printf("Hello, World!\n");
+    char t[]="1 2 3 4 5 6 7 8 9 11 34";
+    Stack_t stack;
+    createStack(strlen(t), &stack);
+    destroyStack(stack);
+
     return 0;
 }
