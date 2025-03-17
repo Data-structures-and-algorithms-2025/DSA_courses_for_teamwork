@@ -10,9 +10,33 @@ void readProductDetails(Product_t *pProduct) {
 
 }
 
-void printProduct(Product_t product) {
-    printf("%s",product.name);
-    printf("%s",product.barcode);
-    printf("%s",product.supplier);
-    printf("%");
+char *getproduct(category_t product) {
+    switch (product) {
+        case FRUIT: {
+            return "fruit";
+        }
+        case VEGETABLE: {
+            return "vegetable";
+        }
+        case DIARY: {
+            return  "diary";
+        }
+        case OTHER: {
+            return "other";
+        }
+        default: {
+            return "helytelen";
+        }
+    }
 }
+
+
+void printProduct(Product_t product) {
+    printf("name:%s\n",product.name);
+    printf("barcode:%s\n",product.barcode);
+    printf("supplier:%s\n",product.supplier);
+    printf("date:%d-%d-%d\n",product.dateOfManufacture.year,product.dateOfManufacture.month,product.dateOfManufacture.day);
+    printf("tipus: %s",getproduct(product.category));
+    printf("%lf",product.price);
+}
+
