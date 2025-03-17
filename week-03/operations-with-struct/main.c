@@ -11,6 +11,7 @@ int main(void)
     Product_t product1 = {"toltottkaposzta","ASD376A","NOKIA",2013,3,3,1,54};
     printProduct(product1);
     Product_t product2;
+
     readProductDetails(&product2);
     printProduct(product2);
     return 0;
