@@ -9,6 +9,6 @@ int main(void)
     d) Mennyi lesz a veremben található elemek összege a leírt műveletek elvégzése után?*/
     //A vermet nem szabad bejárni!!!
     //A main-ben ne hivatkozz a struktúra mezőire!!!
-
+    printf("Teszt!");
     return 0;
 }
