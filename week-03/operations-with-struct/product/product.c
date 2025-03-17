@@ -5,9 +5,13 @@
 #include "product.h"
 
 #include <stdio.h>
+#include <string.h>
 
 void readProductDetails(Product_t *pProduct) {
-
+    getchar();
+    printf("name:");
+    fgets(pProduct->name,sizeof(pProduct->name),stdin);
+    pProduct->name[strcspn(pProduct->name,"\n")]='\0';
 }
 
 char *getproduct(category_t product) {
