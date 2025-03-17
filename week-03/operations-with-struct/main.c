@@ -24,7 +24,12 @@ int main(void)
 
     //2.
     Product_t product2;
+    if (!freopen("input.txt","r",stdin)) {
+        perror("Sikertelen allomanybol valo beolvasas!\n");
+        return -1;
+    }
     readProductDetails(&product2);
+    freopen("CON","r",stdin);
     printProduct(product2);
 
 
