@@ -5,13 +5,11 @@
 #include "stack.h"
 #include <stdbool.h>
 #include <stdlib.h>
-
-
+#include <stdio.h>
 void createStack(int capacity, Stack_t* stack){
   stack->capacity = capacity;
   stack->top = -1;
-  stack->elements = (int *)malloc(stack->capacity, sizeof(int));
-
+  stack->elements = (int *)malloc(stack->capacity* sizeof(int));
   if(!(stack->elements)){
     printf("error");
     exit(-1);
@@ -37,18 +35,17 @@ bool isEmpty(Stack_t stack){
     return false;
 }
 void push(Stack_t* stack, int item){
-  if(isFull(stack)){
+  if(isFull(*stack)){
     printf("A verem tele van");
-    return -1;
   }
-  return stack.elements[++stack.top]=item;
+  stack->elements[++stack->top]=item;
 }
 int pop(Stack_t* stack){
-  if(isEmpty(stack)){
+  if(isEmpty(*stack)){
     printf("A verem ures");
     return -1;
   }
-  return stack.elements[stack.top--];
+  return stack->elements[stack->top--];
 }
 int peek(Stack_t stack){
   if(isEmpty(stack)){
