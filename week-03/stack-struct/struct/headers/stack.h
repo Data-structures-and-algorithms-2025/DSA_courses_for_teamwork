@@ -5,6 +5,11 @@
 #ifndef STACK_H
 #define STACK_H
 #include <stdbool.h>
+typedef struct
+{
+    int capacity, top;
+    int *elements;
+}Stack_t;
 void createStack(int capacity, Stack_t* stack);
 void destroyStack(Stack_t* stack);
 bool isFull(Stack_t stack);
