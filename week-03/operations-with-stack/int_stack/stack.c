@@ -34,3 +34,6 @@ int pop(Stack_t* stack){
        *stack->elements
      }
 }
+int peek(Stack_t stack) {
+
+}
