@@ -6,9 +6,9 @@
 #include <stdio.h>
 
 void readProductDetails(Product_t *pProduct){
-    scanf("%^[\n]\n", pProduct->name);
-    scanf("%^[\n]\n", pProduct->barcode);
-    scanf("%^[\n]\n", pProduct->supplier);
+    scanf("%[^\n]\n", pProduct->name);
+    scanf("%[^\n]\n", pProduct->barcode);
+    scanf("%[^\n]\n", pProduct->supplier);
     scanf("%d", &pProduct->dateOfManufacture.year);
     scanf("%d", &pProduct->dateOfManufacture.month);
     scanf("%d\n", &pProduct->dateOfManufacture.day);
@@ -24,4 +24,5 @@ void printProduct(Product_t product){
     printf("Category : %d\n", product.category);
     printf("Price: %d\n", product.price);
 }
+
 
