@@ -62,4 +62,18 @@ Adottak a következő stack.h fájlban megadott függvény deklarációk. Implem
  */
 //int size(Stack_t stack);
 
+typedef struct{
+    int capacity;
+    int top;
+    int *elements;
+}Stack_t;
+void createStack(int capacity, Stack_t * stack);
+void destroyStack(Stack_t* stack);
+bool isFull(Stack_t stack);
+bool isEmpty(Stack_t stack);
+void push(Stack_t* stack, int item);
+int pop(Stack_t* stack);
+int peek(Stack_t stack);
+int size(Stack_t stack);
+
 #endif //STACK_H
