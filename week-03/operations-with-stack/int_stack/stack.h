@@ -47,14 +47,14 @@ bool isEmpty(Stack_t stack);
  */
 void push(Stack_t* stack, int item);
 /**
- * Returns the top element of the stack,
+ * Removes the top element from the stack,
  * if it is not empty
  * @param stack
  * @return
  */
-int pop(Stack_t* stack);
+void pop(Stack_t* stack);
 /**
- * Removes the top element from the stack,
+ * Returns the top element of the stack,
  * if it is not empty
  * @param stack
  * @return
