@@ -1,5 +1,6 @@
+#include <ctype.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 #include "product/product.h"
 
 int main(void)
@@ -10,7 +11,7 @@ int main(void)
     Írd ki a termék adatait a képernyőre (printProduct).
     */
  Product_t product1={
-"Fazakar",
+"Banan",
    "abdk",
       "Nokia",
      2002,12,1,
@@ -18,6 +19,15 @@ int main(void)
      22
 
  };
-    
+
+printProduct(product1);
+    FILE * fin=fopen("allomany.txt","r");
+    if (!fin) {
+        printf("allomany 404 not found ");
+        return -3;
+    }
+    Product_t product2;
+    //readProductDetails(&product2,fin);
+    //printProduct(product2);
     return 0;
 }

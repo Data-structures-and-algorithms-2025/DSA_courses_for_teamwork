@@ -4,6 +4,8 @@
 
 #ifndef PRODUCT_H
 #define PRODUCT_H
+#include <stdlib.h>
+#include <stdio.h>
 typedef enum category{FRUIT,VEGETABLE,DIARY,OTHER}category_t;
 typedef struct Date {
     int year;
@@ -33,7 +35,7 @@ Adottak a következő product.h fájlban megadott függvény deklarációk. Impl
 Reads all details of a product, product must be passed by reference
 @param pProduct - pointer to a product
 */
-void readProductDetails(Product_t *pProduct);
+void readProductDetails(Product_t *pProduct,FILE *fin);
 /**
 Prints all details of a product
 @param product

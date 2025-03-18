@@ -7,22 +7,22 @@
 #include <stdio.h>
 #include <string.h>
 
-void readProductDetails(Product_t *pProduct) {
-    getchar();
+void readProductDetails(Product_t *pProduct,FILE *fin) {
+    //getchar();
     printf("name:\n");
-    fgets(pProduct->name,sizeof(pProduct->name),stdin);
+    fgets(pProduct->name,sizeof(pProduct->name),fin);
     pProduct->name[strcspn(pProduct->name,"\n")]='\0';
-    getchar();
+    //getchar();
     printf("Barcode: \n");
-    fgets(pProduct->barcode,sizeof(pProduct->barcode),stdin);
+    fgets(pProduct->barcode,sizeof(pProduct->barcode),fin);
     pProduct->barcode[strcspn(pProduct->barcode,"\n")]='\0';
-    getchar();
+    //getchar();
     printf("supplier:\n");
-    fgets(pProduct->supplier,sizeof(pProduct->supplier),stdin);
+    fgets(pProduct->supplier,sizeof(pProduct->supplier),fin);
     pProduct->supplier[strcspn(pProduct->barcode,"\n")]='\0';
-    getchar();
+   // getchar();
     printf("date: year/month/day\n");
-    scanf("%d%d%d",&pProduct->dateOfManufacture.year,&pProduct->dateOfManufacture.month,&pProduct->dateOfManufacture.day);
+    fscanf(fin,"%d%d%d",&pProduct->dateOfManufacture.year,&pProduct->dateOfManufacture.month,&pProduct->dateOfManufacture.day);
     printf("category: FRUITS/VEGETABLES/DIARY/OTHER\n");
     char category[20];
     if (strcmp(category,"FRUIT")==0) {
@@ -38,7 +38,7 @@ void readProductDetails(Product_t *pProduct) {
         pProduct->category=OTHER;
     }
     printf("price:\n");
-    scanf("%lf",&pProduct->price);
+    fscanf(fin,"%lf",&pProduct->price);
 }
 
 char *getproduct(category_t product) {
