@@ -7,10 +7,14 @@
 
 void createStack(int capacity, Stack_t * stack){
  stack=(Stack_t*)malloc(sizeof(Stack_t));
+ stack->top=-1;
+ stack->capacity=capacity;
 }
 
 void destroyStack(Stack_t* stack) {
  free(stack);
+ stack->top=0;
+ stack->capacity=0;
 }
 
 bool isFull(Stack_t stack) {
