@@ -3,10 +3,12 @@
 //
 
 #include "stack.h"
+
+#include <stdio.h>
 #include <stdlib.h>
 
 void createStack(int capacity, Stack_t * stack){
- stack=(Stack_t*)malloc(sizeof(Stack_t));
+ stack->items = (int *)malloc(capacity*sizeof(int));
  stack->top=-1;
  stack->capacity=capacity;
 }
@@ -28,15 +30,17 @@ bool isEmpty(Stack_t stack) {
 }
 
 void push(Stack_t* stack, int item) {
- if ((*stack).top!=0) {
-  (*stack).top+=1;
-  (*stack).top*=item;
+ if (stack->top!=0 && stack->top<stack->capacity) {
+  stack->top+=1;
+  stack->top*=item;
  }
+ else
+  printf("Stack Overflow\n");
 }
 
 int pop(Stack_t* stack) {
- (*stack).items[(*stack).top]=0;
- (*stack).top-=1;
+ stack->items[stack->top]=0;
+ stack->top-=1;
 }
 
 int peek(Stack_t stack) {

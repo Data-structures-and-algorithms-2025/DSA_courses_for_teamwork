@@ -23,12 +23,12 @@ int main(void)
     push(&stack,6);
     push(&stack,7);
     push(&stack,8);
-    peek(stack);
+    printf("%d\n",peek(stack));
     int stackSum=0;
     for (int i = 0; i < size(stack); ++i) {
         stackSum+=peek(stack);
         pop(&stack);
     }
-    printf("A stack összege : %d\n",stackSum);
+    printf("A stack osszege : %d\n",stackSum);
     return 0;
 }
