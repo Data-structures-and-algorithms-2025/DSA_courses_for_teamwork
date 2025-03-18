@@ -60,6 +60,8 @@ Adottak a következő stack.h fájlban megadott függvény deklarációk. Implem
  * @param stack
  * @return
  */
+#include <stdbool.h>
+
 //int size(Stack_t stack);
 typedef struct Stack {
     int capacitiy;

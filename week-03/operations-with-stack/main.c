@@ -19,7 +19,7 @@ int main(void)
     push(&stack, 4);
     push(&stack, 5);
     pop(&stack);
-    printf("A verem tetejen a %d talalhato.\n", peek(stack));
+    printf("A verem tetejen a(z) %d talalhato.\n", peek(stack));
     int  sum=0;
     while (!isEmpty(stack)) {
         sum+=peek(stack);
