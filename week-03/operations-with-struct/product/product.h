@@ -24,6 +24,25 @@ Reads all details of a product, product must be passed by reference
 Prints all details of a product
 @param product
 */
-//void printProduct(Product_t product);
+
+enum Category {FRUIT, VEGETABLE, DIARY, OTHER
+
+};
+typedef struct {
+    int year;
+    int month;
+    int day;
+
+}Date_t;
+typedef struct {
+    char name[30];
+    char barcode[10];
+    char supplier[50];
+    Date_t date;
+    enum Category category;
+    float price;
+}Product_t;
+void printProduct(Product_t product);
+void readProductDetails(Product_t *pProduct);
 
 #endif //PRODUCT_H
