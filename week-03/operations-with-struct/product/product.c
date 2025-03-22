@@ -14,5 +14,9 @@ void readProductDetails(Product_t *pProduct) {
 }
 void printProduct(Product_t product) {
         printf("The product's name: %s\n", product.name);
-
+        printf("The product's barcode: %s\n", product.barcode);
+        printf("The supplie: %s\n", product.supplier);
+        printf("The manufacture date: %d %d %d\n",product.dateOfManufacture.year, product.dateOfManufacture.month, product.dateOfManufacture.day);
+        printf("The type of the product: %i",product.prodType);
+        printf("The price of the product:%.3f",product.price);
 }
