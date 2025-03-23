@@ -9,7 +9,7 @@ typedef struct {
 }Date_t;
 
 enum Category {
-    FRUIT, VEGETABLE, DIARY, OTHER;
+    FRUIT, VEGETABLE, DIARY, OTHER
 };
 
 typedef struct{

@@ -15,4 +15,10 @@ void readProductDetails(Product_t *pProduct) {
 }
 
 void printProduct(Product_t product) {
+    printf("%s\n", product.name);
+    printf("%s\n", product.barCode);
+    printf("%s\n", product.supplier);
+    printf("%i %i %i\n", product.dateOfManufacture.year, product.dateOfManufacture.month, product.dateOfManufacture.day);
+    printf("%i\n", product.category);
+    printf("%.2f\n", product.price);
 }
