@@ -27,7 +27,7 @@ void destroyQueue(Simple_Queue_t* queue);
  * @param queue
  * @return true/false
  */
-bool isFull(Simple_Queue_t queue);
+ bool isFull(Simple_Queue_t queue);
 /**
  * Checks whether the queue is empty or not
  * @param queue
