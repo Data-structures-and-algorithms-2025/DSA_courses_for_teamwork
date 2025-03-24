@@ -1,6 +1,8 @@
 //
 // Created by oszti on 3/23/2025.
 //
+#include<stdio.h>
+#include <stdlib.h>
 
 #ifndef CIRCULAR_QUEUE_H
 #define CIRCULAR_QUEUE_H
@@ -36,6 +38,7 @@ bool isEmpty(CircularQueue_t queue);
  * @param item
  */
 void enqueue(CircularQueue_t* queue, int item);
+
 /**
  * Removes the first item from the queue
  * @param queue
