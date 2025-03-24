@@ -4,6 +4,7 @@
 
 #ifndef PRODUCT_H
 #define PRODUCT_H
+#include <stdio.h>
 /*Definiálj egy Product_t címkéjű struktúrát, ha a következő információkat tudjuk egy termékről:
 •	name (termék neve, max 30 karakter)
 •	barcode (termék kódja, max 10 karakter)
@@ -15,15 +16,38 @@ o	egyszerűbb változat: csak yearOfManufacture
 •	price (a termék ára/ db vagy /kg)
 Adottak a következő product.h fájlban megadott függvény deklarációk. Implementáld a függvényeket a product.c fájlban.*/
 
+typedef struct {
+    int yearofmanufacture;
+}Date_t;
+
+enum Category{
+    FRUIT,
+    VEGETABLE,
+    DIARY,
+    OTHER
+};
+
+typedef struct {
+    char name[30];
+    char barcode[20];
+    char supplier[50];
+    Date_t year;
+    enum Category category;
+    float price;
+}Product_t;
+
+
 /**
 Reads all details of a product, product must be passed by reference
 @param pProduct - pointer to a product
 */
-//void readProductDetails(Product_t *pProduct);
+
+void readProductDetails(Product_t *pProduct);
+char *getCategory(enum Category category);
 /**
 Prints all details of a product
 @param product
 */
-//void printProduct(Product_t product);
+void printProduct(Product_t product);
 
 #endif //PRODUCT_H
