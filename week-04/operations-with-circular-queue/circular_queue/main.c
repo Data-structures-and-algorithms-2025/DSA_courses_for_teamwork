@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include "circular_queue.h"
+
 int main(void)
 {
     /*
@@ -10,5 +12,22 @@ int main(void)
  5.	Mennyi lesz a sorban található elemek összege a leírt műveletek elvégzése után?
  Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használhatod!*/
 
+    CircularQueue_t queue1;
+    createQueue(4,&queue1);
+    for (int i=1;i<5;i++) {
+            if (isFull(queue1)==false) {
+                enqueue(&queue1,i);
+            }
+    }
+    dequeue(&queue1);
+    dequeue(&queue1);
+    enqueue(&queue1,5);
+    enqueue(&queue1,6);
+    enqueue(&queue1,7);
+    dequeue(&queue1);
+    //4 es ertek lesz asszem
+
+display(queue1);
+destroyQueue(&queue1);
     return 0;
 }
