@@ -2,6 +2,9 @@
 // Created by oszti on 3/23/2025.
 //
 
+#include <stdio.h>
+#include <stdlib.h>
+
 #ifndef CIRCULAR_QUEUE_H
 #define CIRCULAR_QUEUE_H
 
@@ -11,6 +14,7 @@ typedef struct {
     int rear;
     int *elements;
 }CircularQueue_t;
+
 
 void createQueue(int capacity, CircularQueue_t *queue);
 /**
