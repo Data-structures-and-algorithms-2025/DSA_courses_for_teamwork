@@ -10,5 +10,6 @@ int main(void)
 5.  Mennyi lesz a sorban található elemek összege a leírt műveletek elvégzése után?
 Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használhatod.*/
 
+
     return 0;
 }
