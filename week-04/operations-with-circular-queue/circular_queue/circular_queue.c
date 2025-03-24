@@ -51,6 +51,6 @@ void display(CircularQueue_t queue) {
     printf("\n");
 }
 int peek(CircularQueue_t queue) {
-    return queue.front;
+    return queue.elements[queue.front];
 }
 
