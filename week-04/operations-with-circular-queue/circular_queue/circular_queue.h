@@ -24,17 +24,8 @@ void destroyQueue(CircularQueue_t* queue);
  * @return true/false
  */
 bool isFull(CircularQueue_t queue);
-/**
- * Checks whether the queue is empty or not
- * @param queue
- * @return true/false
- */
 bool isEmpty(CircularQueue_t queue);
-/**
- * Adds a new item to the end of the queue
- * @param queue
- * @param item
- */
+
 void enqueue(CircularQueue_t* queue, int item);
 /**
  * Removes the first item from the queue
