@@ -26,6 +26,7 @@ void enqueue(CircularQueue_t *queue, int item) {
     if (isEmpty(*queue)) { queue->front=0;}
     queue->rear=(queue->rear+1)%queue->capacity;
     queue->elements[queue->rear]=item;
+    queue->rear++;
 }
 int dequeue(CircularQueue_t *queue) {
     if (isEmpty(*queue)) { printf("is empty"); return INT_MIN; }
