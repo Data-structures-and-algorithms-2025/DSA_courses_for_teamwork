@@ -29,7 +29,7 @@ int main(void)
 
     dequeue(&queue); //egy ertek kivetele
 
-    printf("%d/n",peek(queue)); //sor elejenek kiiratasa
+    printf("%d \n",peek(queue)); //sor elejenek kiiratasa
 
 
     //display(queue); //kiiratjuk a sort ellenorzes celjabol
