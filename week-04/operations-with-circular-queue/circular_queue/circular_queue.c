@@ -7,8 +7,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 void createQueue(int capacity, CircularQueue_t *queue) {
-
+ queue->capacity=capacity;
+ queue->elements=(int*)malloc(capacity *sizeof(int));
+ if (queue->elements==NULL) {
+  printf("hiba\n");
+  exit(EXIT_FAILURE);
+ }
+ queue->front=-1;
+ queue->rear=-1;
 }
+
+void destroyQueue(CircularQueue_t *queue) {
+  free(queue->elements);
+}
+
 
 bool isFull(CircularQueue_t queue){
  return (queue.front-1==queue.rear || (queue.front==0 &&
@@ -47,5 +59,35 @@ int dequeue(CircularQueue_t* queue){
  queue->front=(queue->front+1)%queue->capacity;
  }
  return save;
+}
+
+void display(CircularQueue_t queue) {
+ if (isEmpty(queue))
+ {
+  printf("is empty");
+  exit(-4);
+ }
+ if (queue.front==queue.rear)
+  printf("%i ",queue.elements[queue.front]);
+ else{
+  int i=queue.front;
+  do
+  {
+   printf("%i ",queue.elements[i]);
+   i=(i+1)%queue.capacity;
+  }
+  while (i!=queue.rear);
+  printf("%i ",queue.elements[i]);
+ }
+ printf("\n");
+}
+
+int peek(CircularQueue_t queue) {
+ if (isEmpty(queue)) {
+  printf("empty");
+  exit(-5);
+ }
+ return queue.elements[queue.front];
+
 }
 
