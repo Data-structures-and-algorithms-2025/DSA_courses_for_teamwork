@@ -4,6 +4,7 @@
 
 #ifndef SIMPLE_QUEUE_H
 #define SIMPLE_QUEUE_H
+#include <stdbool.h>
 typedef struct {
     int capacity;
     int front;
