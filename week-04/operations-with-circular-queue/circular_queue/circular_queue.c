@@ -19,14 +19,14 @@ void destroyQueue(CircularQueue_t* queue) {
 }
 
 bool isFull(CircularQueue_t queue) {
-    if ((queue.rear-queue.front)==queue.capacity) {
+    if ((queue.rear)==queue.capacity-1) {
         return true;
     }
     return false;
 }
 
 bool isEmpty(CircularQueue_t queue) {
-    if (queue.front==-1 && queue.rear==-1) {
+    if (queue.front==-1 || queue.rear==-1) {
         return true;
     }
     return false;
@@ -53,13 +53,13 @@ void dequeue(CircularQueue_t* queue) {
         printf("Queue is empty\n");
     }
     else {
-        queue->rear=0;
+        queue->elements[queue->rear]=0;
         queue->rear=queue->rear-1;
     }
 }
 
 void display(CircularQueue_t queue) {
-    for (int i = queue.front; i < queue.rear; i++) {
+    for (int i = queue.front; i < queue.rear+1; i++) {
         printf("%d ", queue.elements[i]);
     }
 }
