@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include
 int main(void)
 {
     /*
@@ -9,6 +9,7 @@ int main(void)
 4.	Melyik szám lesz a sor elején a leírt műveletek elvégzése után?
 5.  Mennyi lesz a sorban található elemek összege a leírt műveletek elvégzése után?
 Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használhatod.*/
+
 
     return 0;
 }

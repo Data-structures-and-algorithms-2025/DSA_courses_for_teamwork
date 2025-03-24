@@ -3,7 +3,7 @@
 //
 
 #ifndef SIMPLE_QUEUE_H
-#define SIMPLE_QUEUE_H
+#define SIMPLE_QUEUE_Ht6
 typedef struct {
     int capacity;
     int front;
