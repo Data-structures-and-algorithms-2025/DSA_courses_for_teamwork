@@ -57,5 +57,7 @@ void display(Simple_Queue_t queue);
  * @return the element in the front
  */
 int peek(Simple_Queue_t queue);
+void createQueue(int capacity, Simple_Queue_t *queue);
+
 
 #endif //SIMPLE_QUEUE_H
