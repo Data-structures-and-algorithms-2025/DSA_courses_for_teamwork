@@ -4,6 +4,8 @@
 
 #include "simple_queue.h"
 #include <stdlib.h>
+#include <stdbool.h>
+#include <stdio.h>
 void createQueue(int capacity, Simple_Queue_t* queue)
 {
     queue->capacity=capacity;
