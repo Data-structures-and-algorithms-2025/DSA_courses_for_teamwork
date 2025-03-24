@@ -67,7 +67,7 @@ void display(Simple_Queue_t queue){
         printf("The queue is empty");
         exit(-3);
     }
-    for (int i=queue.front; i<queue.rear; i++) {
+    for (int i=queue.front; i<=queue.rear; i++) {
         printf("%d ", queue.elements[i]);
     }
     printf("\n");
