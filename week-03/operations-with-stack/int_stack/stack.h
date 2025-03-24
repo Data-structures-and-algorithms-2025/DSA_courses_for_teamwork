@@ -10,19 +10,19 @@ Definiálj egy Stack címkéjű struktúrát, amely egy egész számokat tartalm
 •	top (a verem teteje – a legfelső elem pozíciója)
 •	items/elemek (egész számokat tartalmazó tömb)
 Adottak a következő stack.h fájlban megadott függvény deklarációk. Implementáld a függvényeket az stack.c fájlban.*/
+
+
+typedef struct Stack {
+    int capacity;
+    int top;
+    int *elements;
+}Stack_t;
 /**
  * Initializing the capacity and size of stack,
  * allocating memory for the @elements array
  * @param capacity
  * @param stack
  */
-
-typedef struct Stack {
-    int capacity;
-    int top;
-    int *items;
-}Stack_t;
-
 void createStack(int capacity, Stack_t * stack);
 /**
  * Deallocates the memory
