@@ -14,7 +14,7 @@ int main(void)
 
     CircularQueue_t queue;
 
-    createQueue(&queue, 4);
+    createQueue(4, &queue);
     enqueue(&queue, 1);
     enqueue(&queue, 2);
     enqueue(&queue, 3);
