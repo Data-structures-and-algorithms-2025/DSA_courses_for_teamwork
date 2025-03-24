@@ -15,47 +15,58 @@ void createQueue(int capacity, CircularQueue_t *queue) {
 }
 void destroyQueue(CircularQueue_t *queue) {
     free(queue->elements);
+    queue->elements = NULL;
+    queue->capacity = 0;
+    queue->front = queue->rear = -1;
 }
 bool isFull(CircularQueue_t queue){
-  return queue.front == (queue.rear+1) % queue.capacity ? true : false;
+    return (queue.front == (queue.rear + 1) % queue.capacity);
  }
 bool isEmpty(CircularQueue_t queue) {
-    return queue.front == -1 ? true : false;
+    return (queue.front == -1);
 }
 void enqueue(CircularQueue_t *queue, int item) {
-    if (isFull(*queue)) { printf("It is full"); exit(-3); }
-    if (isEmpty(*queue)) { queue->front=0;}
-    queue->rear=(queue->rear+1)%queue->capacity;
-    queue->elements[queue->rear]=item;
-    queue->rear++;
+    if (isFull(*queue)) {
+        printf("Queue is full!\n");
+        return;
+    }
+    if (isEmpty(*queue)) {
+        queue->front = 0;
+    }
+    queue->rear = (queue->rear + 1) % queue->capacity;
+    queue->elements[queue->rear] = item;
 }
 int dequeue(CircularQueue_t *queue) {
-    if (isEmpty(*queue)) { printf("is empty"); return INT_MIN; }
+    if (isEmpty(*queue)) {
+        printf("Queue is empty!\n");
+        return INT_MIN;
+    }
     int temp = queue->elements[queue->front];
-    if (queue->front==queue->rear) { queue->front=queue->rear=-1; }
-    else {
-        queue->front=(queue->front+1)%queue->capacity;
+    if (queue->front == queue->rear) {
+        queue->front = queue->rear = -1;
+    } else {
+        queue->front = (queue->front + 1) % queue->capacity;
     }
     return temp;
 }
 void display(CircularQueue_t queue) {
-    if (isEmpty(queue)) { printf("is empty"); exit(-4); }
-    /*if (queue.front==queue.rear)
-        printf("%i ",queue.elements[queue.front]);
-    else {
-        int i=queue.front;
-        do { printf("%i ",queue.elements[i]);
-            i=(queue.front)%queue.capacity;
-        }
-        while (i!=queue.rear);
-        printf("%i ",queue.elements[i]);
-    }*/
-    for (int i = queue.front; i < queue.rear; ++i) {
-        printf("%i ",queue.elements[i]);
+    if (isEmpty(queue)) {
+        printf("Queue is empty!\n");
+        return;
+    }
+    int i = queue.front;
+    while (true) {
+        printf("%d ", queue.elements[i]);
+        if (i == queue.rear) break;
+        i = (i + 1) % queue.capacity;
     }
     printf("\n");
 }
 int peek(CircularQueue_t queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty!\n");
+        return INT_MIN;
+    }
     return queue.elements[queue.front];
 }
 
