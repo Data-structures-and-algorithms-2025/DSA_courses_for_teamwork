@@ -4,19 +4,9 @@
 
 #include "simple_queue.h"
 #include <stdlib.h>
-
 #include <stdio.h>
-void createQueue(int capacity, Simple_Queue_t* queue) {
-    queue->capacity = capacity;
-    queue->front = queue->rear = -1;
-    queue->elements = (int*)malloc(capacity * sizeof(int));
-    if (!queue->elements) {
-        printf("Memory allocation error\n");
-
 #include <stdbool.h>
-#include <stdio.h>
-void createQueue(int capacity, Simple_Queue_t* queue)
-{
+void createQueue(int capacity, Simple_Queue_t* queue){
     queue->capacity=capacity;
     queue->rear=queue->front=-1;
     queue->elements=(int*)malloc(capacity*sizeof(int));
@@ -26,15 +16,14 @@ void createQueue(int capacity, Simple_Queue_t* queue)
         exit(-1);
     }
 }
-
-void destroyQueue(Simple_Queue_t* queue) {
+void destroyQueue(Simple_Queue_t* queue){
     free(queue->elements);
     queue->elements = NULL;
     queue->front = queue->rear = -1;
     queue->capacity = 0;
 }
 
-bool isFull(Simple_Queue_t queue) {
+bool isFull(Simple_Queue_t queue){
     return (queue.rear + 1) % queue.capacity == queue.front;
 }
 
@@ -42,7 +31,7 @@ bool isEmpty(Simple_Queue_t queue) {
     return queue.front == -1;
 }
 
-void enqueue(Simple_Queue_t* queue, int item) {
+void enqueue(Simple_Queue_t* queue, int item){
     if (isFull(*queue)) {
         printf("The queue is full\n");
         return;
@@ -55,7 +44,7 @@ void enqueue(Simple_Queue_t* queue, int item) {
     queue->elements[queue->rear] = item;
 }
 
-int dequeue(Simple_Queue_t* queue) {
+int dequeue(Simple_Queue_t* queue){
     if (isEmpty(*queue)) {
         printf("The queue is empty\n");
         exit(-3);
