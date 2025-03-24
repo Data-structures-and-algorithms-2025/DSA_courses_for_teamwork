@@ -12,6 +12,11 @@ typedef struct {
     int *elements;
 }CircularQueue_t;
 
+/**
+ * Allocates memory for queue
+ * @param capacity
+ * @param queue
+ */
 void createQueue(int capacity, CircularQueue_t *queue);
 /**
  * Deallocates the elements array -> free
@@ -41,7 +46,7 @@ void enqueue(CircularQueue_t* queue, int item);
  * @param queue
  * @return
  */
-int dequeue(CircularQueue_t* queue);
+void dequeue(CircularQueue_t* queue);
 /**
  * Prints all items of the queue
  * @param queue
