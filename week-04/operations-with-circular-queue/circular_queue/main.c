@@ -31,6 +31,7 @@ int main(void)
 
     printf("Front element: %d\n", queue.elements[queue.front]);
 
+
     int sum = 0;
     int i = queue.front;
     while (i != queue.rear) {

@@ -83,4 +83,5 @@ int peek(CircularQueue_t queue) {
         exit(-3);
     }
     return queue.elements[queue.front];
+
 }

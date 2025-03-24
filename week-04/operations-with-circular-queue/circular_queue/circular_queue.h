@@ -38,6 +38,7 @@ bool isEmpty(CircularQueue_t queue);
  * @param item
  */
 void enqueue(CircularQueue_t* queue, int item);
+
 /**
  * Removes the first item from the queue
  * @param queue
