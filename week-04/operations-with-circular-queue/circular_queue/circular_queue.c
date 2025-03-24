@@ -60,6 +60,3 @@ int peek(CircularQueue_t queue) {
         return -1;
     }
 }
-
-
-
