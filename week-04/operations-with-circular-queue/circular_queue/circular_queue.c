@@ -30,6 +30,34 @@ bool isEmpty(CircularQueue_t queue) {
     return queue.front==-1;
 }
 
+void enqueue(CircularQueue_t *queue, int item) {
+    if (isFull(*queue)) {
+        printf("Hiba:Tele van a sor!\n");
+        return;
+    }
+    if (isEmpty(*queue)) {
+        queue->front=queue->rear=0;
+    }else {
+        queue->rear=(queue->rear+1)%queue->capacity;
+    }
+    queue->elements[queue->rear]=item;
+    printf("Hozzaadva: %d\n",item);
+}
+
+int dequeue(CircularQueue_t *queue) {
+    if (isEmpty(*queue)) {
+        printf("Hiba:Ures a sor!\n");
+        exit(-3);
+    }
+    int save=queue->elements[queue->front];
+    if (queue->rear==queue->front) {
+        queue->rear=queue->front=-1;
+    }else {
+        queue->front++;
+    }
+    return save;
+}
+
 void display(CircularQueue_t queue){
     if (isEmpty(queue))
     {
