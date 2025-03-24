@@ -8,8 +8,8 @@
 
 typedef struct {
     int capacity;
-    int front;
-    int rear;
+    int front=-1;
+    int rear=-1;
     int *elements;
 }CircularQueue_t;
 
