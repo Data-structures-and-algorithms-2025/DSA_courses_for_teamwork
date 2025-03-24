@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "circular_queue.h"
 int main(void)
 {
     /*
@@ -9,6 +9,26 @@ int main(void)
  4.	Melyik szám lesz a sor elején a leírt műveletek elvégzése után?
  5.	Mennyi lesz a sorban található elemek összege a leírt műveletek elvégzése után?
  Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használhatod!*/
+    CircularQueue_t queue;
+    createQueue(4, &queue);
 
+    enqueue(&queue, 1);
+    enqueue(&queue, 2);
+    enqueue(&queue, 3);
+    enqueue(&queue, 4);
+
+    dequeue(&queue);
+    dequeue(&queue);
+
+    enqueue(&queue, 5);
+    enqueue(&queue, 6);
+    enqueue(&queue, 7);
+
+    dequeue(&queue);
+
+    printf("Front element: %d\n", peek(queue));
+    printf("Sum of elements: %d\n", sumQueue(queue));
+
+    destroyQueue(&queue);
     return 0;
 }
