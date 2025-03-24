@@ -29,15 +29,15 @@ int main(void)
 
     dequeue(&queue); //egy ertek kivetele
 
-    printf("%d",peek(queue)); //sor elejenek kiiratasa
+    printf("%d/n",peek(queue)); //sor elejenek kiiratasa
 
 
-    display(queue); //kiiratjuk a sort ellenorzes celjabol
+    //display(queue); //kiiratjuk a sort ellenorzes celjabol
 
     int temp = 0;
     for (int i = 0; i < queue.capacity; ++i) {
         temp += peek(queue);
-        dequeue(&queue);
+        //dequeue(&queue);
     }
     printf("a sorban levo elemek osszege: %d",temp);
 
