@@ -8,6 +8,7 @@
 #include <stdio.h>
 
 void createQueue(int capacity, CircularQueue_t *queue) {
+    queue->capacity = capacity;
     queue->elements = (int*)malloc(capacity*sizeof(int));
     if (!queue->elements) {perror("Memory allocation error!"); exit(-1);}
     queue->front = queue->rear = -1;
@@ -39,7 +40,7 @@ int dequeue(CircularQueue_t *queue) {
 }
 void display(CircularQueue_t queue) {
     if (isEmpty(queue)) { printf("is empty"); exit(-4); }
-    if (queue.front==queue.rear)
+    /*if (queue.front==queue.rear)
         printf("%i ",queue.elements[queue.front]);
     else {
         int i=queue.front;
@@ -47,6 +48,9 @@ void display(CircularQueue_t queue) {
             i=(queue.front)%queue.capacity;
         }
         while (i!=queue.rear);
+        printf("%i ",queue.elements[i]);
+    }*/
+    for (int i = queue.front; i < queue.rear; ++i) {
         printf("%i ",queue.elements[i]);
     }
     printf("\n");
