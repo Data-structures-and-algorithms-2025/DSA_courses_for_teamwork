@@ -29,19 +29,21 @@ int main(void)
 
     dequeue(&queue); //egy ertek kivetele
 
-    printf("%d \n",peek(queue)); //sor elejenek kiiratasa
+    printf("peek :%d \n",peek(queue)); //sor elejenek kiiratasa
 
 
-    //display(queue); //kiiratjuk a sort ellenorzes celjabol
+    display(queue); //kiiratjuk a sort ellenorzes celjabol
 
     int temp = 0;
-    for (int i = 0; i < queue.capacity; ++i) {
-        temp += peek(queue);
-        dequeue(&queue);
+    int i = queue.front;
+
+    while (true) {
+        temp += queue.elements[i];
+        if (i == queue.rear) break;  
+        i = (i + 1) % queue.capacity;
     }
-    printf("a sorban levo elemek osszege: %d",temp);
 
-
+    printf("A sorban lévő elemek összege: %d\n", temp);
 
     return 0;
 }
