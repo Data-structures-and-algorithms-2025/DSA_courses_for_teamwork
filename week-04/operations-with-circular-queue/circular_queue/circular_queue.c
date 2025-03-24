@@ -3,6 +3,9 @@
 //
 
 #include "circular_queue.h"
+#include<stdio.h>
+#include<stdlib.h>
+
 
 void enqueue(CircularQueue_t* queue, int item)
 {
@@ -16,7 +19,7 @@ void enqueue(CircularQueue_t* queue, int item)
  queue->front=0;
  }
  queue->rear=(queue->rear+1)%queue->capacity;
- queue->elements[front]=item;
+ queue->elements[queue->front]=item;
 }
 
 
@@ -40,7 +43,7 @@ int dequeue(CircularQueue_t* queue)
  return queue->elements[queue->front];
 }
 
-void display(Circular_Queue_t queue)
+void display(CircularQueue_t queue)
 {
  if (isEmpty(queue))
  {
