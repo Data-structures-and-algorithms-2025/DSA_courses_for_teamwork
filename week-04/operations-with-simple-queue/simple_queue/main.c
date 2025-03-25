@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#include "simple_queue.h"
+
 int main(void)
 {
     /*
@@ -10,5 +12,23 @@ int main(void)
 5.  Mennyi lesz a sorban található elemek összege a leírt műveletek elvégzése után?
 Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használhatod.*/
 
+    Simple_Queue_t queue;
+    int capacity=5;
+    createQueue(capacity, &queue);
+    for (int i = 0; i < capacity; i++) {
+        enqueue(&queue, (i+1)*10);
+    }
+    display(queue);
+    printf("%i", dequeue(&queue));
+    printf(" %i ", dequeue(&queue));
+
+    printf("\n%i ", dequeue(&queue));
+    printf(" %i\n",peek(queue));
+    display(queue);
+    int sum = 0;
+    for (int i = 0; i <2;i++) {
+        sum=sum+dequeue(&queue);
+    }
+    printf("Sum is %i\n", sum);
     return 0;
 }
