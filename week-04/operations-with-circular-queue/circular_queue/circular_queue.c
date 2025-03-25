@@ -53,7 +53,6 @@ int dequeue(CircularQueue_t *queue) {
     if (queue->rear==queue->front) {
         queue->rear=queue->front=-1;
     }else {
-        queue->front++;
         queue->front=(queue->front+1)%queue->capacity;
     }
     return save;
