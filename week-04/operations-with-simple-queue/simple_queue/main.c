@@ -21,9 +21,7 @@ Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használh
     display(queue);
     printf("%i", dequeue(&queue));
     printf(" %i ", dequeue(&queue));
-    /*for (int i = 6; i <= 8; i++) {
-        enqueue(&queue, i*10);
-    }*/
+
     printf("\n%i ", dequeue(&queue));
     printf(" %i\n",peek(queue));
     display(queue);
