@@ -18,7 +18,7 @@ Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használh
     dequeue(&queue1); dequeue(&queue1); enqueue(&queue1,60); enqueue(&queue1,70); enqueue(&queue1,80);
     dequeue(&queue1);
     int frontElement = peek(queue1);
-
+    printf("Front element: %d\n", frontElement);
 
     int sum=0;
     while (!isEmpty(queue1)) {

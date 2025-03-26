@@ -11,6 +11,7 @@ typedef struct {
     int *elements;
 }Simple_Queue_t;
 
+#include <stdbool.h>
 /**
  * Creates the queue data structure, allocates memory for elements
  * @param capacity
