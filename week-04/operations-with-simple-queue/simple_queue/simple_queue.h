@@ -6,8 +6,8 @@
 #define SIMPLE_QUEUE_H
 typedef struct {
     int capacity;
-    int front;
-    int rear;
+    int front;   //az elso elem pozicioja
+    int rear;    //az utolso elem pozicioja
     int *elements;
 }Simple_Queue_t;
 

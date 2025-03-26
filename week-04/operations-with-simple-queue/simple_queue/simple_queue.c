@@ -38,12 +38,48 @@ bool isEmpty(Simple_Queue_t queue)
 void enqueue(Simple_Queue_t *queue, int item) {
     if(isFull(*queue)) {
         printf("FULL_MESSAGE");
-        return;
+        exit(-3);
     }
     if(isEmpty(*queue)) {
         queue->front = 0;
     }
     queue->elements[++queue->rear]=item;
+}
+
+int dequeue(Simple_Queue_t* queue) {  // eltavolitja az elso elemet az adatszerkezetbol
+    if(isEmpty(*queue)) {
+        printf("The queue is empty!\n");
+        exit(-1);
+    }
+    int save = queue->elements[queue->front];
+    if(queue->front == queue->rear) {
+        queue->front = queue->rear = -1;
+    }
+
+    else {
+        queue->front++;
+    }
+    return queue->elements[save];
+}
+
+void display(Simple_Queue_t queue) {  // sor elemeinek a kiirasa
+    if (isEmpty(queue)) {
+        printf("The queue is empty!\n");
+        exit(-1);
+    }
+    printf("The cars’ plate number are the following:\n");
+    for (int i = queue.front; i <= queue.rear; ++i) {
+        printf("%i ", queue.elements[i]);
+    }
+}
+
+int peek(Simple_Queue_t queue) {
+    if(isEmpty(queue)) {
+        printf("The queue is empty!\n");
+        exit(-1);
+    }
+    
+    return queue.elements[queue.front];
 }
 
 
