@@ -17,14 +17,14 @@ Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használh
     enqueue(&queue1,10); enqueue(&queue1,20); enqueue(&queue1,30); enqueue(&queue1,40); enqueue(&queue1,50);
     dequeue(&queue1); dequeue(&queue1); enqueue(&queue1,60); enqueue(&queue1,70); enqueue(&queue1,80);
     dequeue(&queue1);
-    peek(queue1);
+    int frontElement = peek(queue1);
 
-    Simple_Queue_t queuep=queue1;
+
     int sum=0;
-    while(!isEmpty(queuep)) {
-        sum+=peek(queuep);
-        dequeue(&queuep);
+    while (!isEmpty(queue1)) {
+        sum += dequeue(&queue1);
     }
     printf("Sum: %d\n",sum);
+    destroyQueue(&queue1);
     return 0;
 }

@@ -19,6 +19,7 @@ void createQueue(int capacity, Simple_Queue_t* queue)
 }
 void destroyQueue(Simple_Queue_t* queue){
     free(queue->elements);
+    queue->elements = NULL;
 }
 bool isFull(Simple_Queue_t queue)
 {
