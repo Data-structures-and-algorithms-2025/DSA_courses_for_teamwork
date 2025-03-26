@@ -10,38 +10,21 @@ typedef struct {
     int front;
     int rear;
     int *elements;
-}CircularQueue_t;
+} CircularQueue_t;
 
 void createQueue(int capacity, CircularQueue_t *queue);
-/**
- * Deallocates the elements array -> free
- * @param queue
- */
-void destroyQueue(CircularQueue_t* queue);
-/**
- * Checks whether the queue is full or not
- * @param queue
- * @return true/false
- */
+
+void destroyQueue(CircularQueue_t *queue);
+
 bool isFull(CircularQueue_t queue);
+
 bool isEmpty(CircularQueue_t queue);
 
-void enqueue(CircularQueue_t* queue, int item);
-/**
- * Removes the first item from the queue
- * @param queue
- * @return
- */
-int dequeue(CircularQueue_t* queue);
-/**
- * Prints all items of the queue
- * @param queue
- */
+void enqueue(CircularQueue_t *queue, int item);
+
+int dequeue(CircularQueue_t *queue);
+
 void display(CircularQueue_t queue);
-/**
- * Returns the element in the front
- * @param queue
- * @return the element in the front
- */
+
 int peek(CircularQueue_t queue);
 #endif //CIRCULAR_QUEUE_H
