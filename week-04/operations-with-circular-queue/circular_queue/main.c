@@ -26,6 +26,7 @@ int main(void)
     enqueue(&queue1,7);
     dequeue(&queue1);
     //4 es ertek lesz asszem
+//az osszeadas utan 15
 
 display(queue1);
 destroyQueue(&queue1);

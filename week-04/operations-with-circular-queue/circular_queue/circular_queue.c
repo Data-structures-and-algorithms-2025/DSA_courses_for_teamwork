@@ -77,7 +77,7 @@ void display(CircularQueue_t queue) {
    i=(i+1)%queue.capacity;
   }
   while (i!=queue.rear);
-  printf("%i ",queue.elements[i]);
+  printf("%i ",queue.elements [i]);
  }
  printf("\n");
 }
