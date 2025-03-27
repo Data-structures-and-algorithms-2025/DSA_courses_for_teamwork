@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#define MAX_CAPACITY 5
 int main(void)
 {
     /*
@@ -9,6 +9,20 @@ int main(void)
 4.	Melyik szám lesz a sor elején a leírt műveletek elvégzése után?
 5.  Mennyi lesz a sorban található elemek összege a leírt műveletek elvégzése után?
 Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használhatod.*/
+
+    int queue[MAX_CAPACITY];
+    int front = 0, rear = -1;
+
+    int numbers[] = {10, 20, 30, 40, 50};
+
+    for (int i = 0; i < 5; i++) {
+        if (rear < MAX_CAPACITY - 1) {
+            rear++;
+            queue[rear] = numbers[i];
+        } else {
+            printf("A sor megtelt!\n");
+        }
+    }
 
     return 0;
 }
