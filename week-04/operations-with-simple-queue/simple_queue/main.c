@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Simple_Queue.h"
+#include "simple_queue.h"
 int main(void)
 {
     /*
@@ -19,16 +19,22 @@ Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használh
     enqueue(&queue, 40);
     enqueue(&queue, 50);
 
-    dequeue(&queue);
-    dequeue(&queue);
+    display(queue);
+
+    printf("a kivett szamok:\n%i\n", dequeue(&queue));
+    printf("%i\n", dequeue(&queue));
 
     enqueue(&queue, 60);
     enqueue(&queue, 70);
+    enqueue(&queue, 80);
+
+    display(queue);
 
     dequeue(&queue);
 
+    display(queue);
 
-    printf("A sor elejen levo szam: %d\n " ,peek(queue));
+    printf("A sor elejen levo szam: %d\n" ,peek(queue));
 
     int sum = 0;
     while (!isEmpty(queue)) {

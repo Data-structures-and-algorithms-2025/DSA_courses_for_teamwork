@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+
 void createQueue(int capacity, Simple_Queue_t* queue){
     queue->capacity=capacity;
     queue->rear=queue->front=-1;
@@ -16,6 +17,7 @@ void createQueue(int capacity, Simple_Queue_t* queue){
         exit(-1);
     }
 }
+
 void destroyQueue(Simple_Queue_t* queue){
     free(queue->elements);
     queue->elements = NULL;
@@ -24,7 +26,7 @@ void destroyQueue(Simple_Queue_t* queue){
 }
 
 bool isFull(Simple_Queue_t queue){
-    return (queue.rear + 1) % queue.capacity == queue.front;
+    return queue.rear == queue.capacity - 1;
 }
 
 bool isEmpty(Simple_Queue_t queue) {
@@ -37,37 +39,36 @@ void enqueue(Simple_Queue_t* queue, int item){
         return;
     }
     if (isEmpty(*queue)) {
-        queue->front = queue->rear = 0;
-    } else {
-        queue->rear = (queue->rear + 1) % queue->capacity;
+        queue->front++;
     }
-    queue->elements[queue->rear] = item;
+    queue->elements[++queue->rear] = item;
 }
 
-int dequeue(Simple_Queue_t* queue){
-    if (isEmpty(*queue)) {
-        printf("The queue is empty\n");
+int dequeue(Simple_Queue_t* queue) {
+    if (isEmpty(*queue))
+    {
+        printf("The queue is empty");
         exit(-3);
     }
-    int save = queue->elements[queue->front];
+    int save=queue->elements[queue->front];
+
     if (queue->front == queue->rear) {
-        queue->front = queue->rear = -1;
-    } else {
-        queue->front = (queue->front + 1) % queue->capacity;
+        queue->front = queue->rear=-1;
     }
+    else {
+        queue->front++;
+    }
+
     return save;
 }
 
-void display(Simple_Queue_t queue) {
+void display(Simple_Queue_t queue){
     if (isEmpty(queue)) {
-        printf("The queue is empty\n");
-        return;
+        printf("The queue is empty");
+        exit(-3);
     }
-    int i = queue.front;
-    while (true) {
+    for (int i=queue.front; i<=queue.rear; i++) {
         printf("%d ", queue.elements[i]);
-        if (i == queue.rear) break;
-        i = (i + 1) % queue.capacity;
     }
     printf("\n");
 }
