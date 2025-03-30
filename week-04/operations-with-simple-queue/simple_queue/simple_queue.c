@@ -22,11 +22,11 @@ void destroyQueue(Simple_Queue_t* queue) {
     free(queue->elements);
     queue->elements = NULL;
 }
-bool isFull(Simple_Queue_t queue) {
+bool isFullQueue(Simple_Queue_t queue) {
     return (queue.rear == (queue.capacity-1));
 }
-bool isEmpty(Simple_Queue_t queue) {
-    return (queue.front ==queue.rear);
+bool isEmptyQueue(Simple_Queue_t queue) {
+    return queue.front==-1 && queue.rear==-1;
 }
 void enqueue(Simple_Queue_t* queue, int item) {
     if (isFull(*queue))
@@ -65,12 +65,11 @@ void display(Simple_Queue_t queue) {
     printf("\n");
 }
 
-int peek(Simple_Queue_t queue)
-{if (isEmpty(queue))
-{
- printf("The queue is empty");
- exit(-3);
+int peek(Simple_Queue_t queue){
+    if (isEmpty(queue)){
+        printf("The queue is empty");
+        exit(-3);
+    }
+    return queue.elements[queue.front];
 }
- return …
- }
 
