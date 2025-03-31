@@ -31,6 +31,7 @@ void insertAfter(Node *prev_ref, int new_data) {
     Node *newNode1=newNode(new_data);
     newNode1->next=prev_ref->next;
     newNode1->prev=prev_ref;
+    prev_ref->next->prev = newNode1;
     prev_ref->next=newNode1;
 }
 
