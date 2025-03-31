@@ -58,7 +58,7 @@ void insertAtEnd(Node** head_ref, int new_data) {
 void printList(Node* head) {
     Node* temp = head;
     while (temp != NULL) {
-        printf("%d -> ", temp->data);
+        printf("%d \n", temp->data);
         temp = temp->next;
     }
     printf("NULL\n");
