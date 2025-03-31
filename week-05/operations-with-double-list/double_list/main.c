@@ -18,13 +18,13 @@ Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredm
 Írd ki a lista elemeit mindkét irányból.*/
 
     Node *head = NULL;
-    Node *node1, *node2, *node3, *node4, *node5;
-    insertAtEnd(&node1,1);
-    insertAtEnd(&node2,2);
-    insertAtEnd(&node3,3);
-    insertAtBeginning(&node4,4);
-    insertAfter(node2,5);
+    Node *node1;
+    insertAtEnd(&head,1);
+    insertAtEnd(&head,2);
+    insertAtEnd(&head,3);
+    insertAtBeginning(&head,4);
+    insertAfter(head,5);
     isEmpty(head) ? printf("A lista ures!!\n") : printf("A lista nem ures!\n");
     printListFromBegin(head);
-    printListFromEnd(node3);
+    printListFromEnd(head);
 }
