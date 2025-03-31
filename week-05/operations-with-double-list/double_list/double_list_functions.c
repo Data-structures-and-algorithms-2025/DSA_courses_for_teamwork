@@ -63,3 +63,25 @@ void insertAtEnd(Node **head_ref, int new_data) {
     temp->next = last;
     last->prev = temp;
 }
+
+void printListFromBegin(Node* head) {
+    Node *temp=head;
+    while (temp!=NULL) {
+        printf("%i ->",temp->data);
+        temp=temp->next;
+    }
+    printf("NULL\n");
+}
+void printListFromEnd(Node *node) {
+    if (node==NULL) {
+        return;
+    }
+    while (node->next!=NULL) {
+        node=node->next;
+    }
+    while (node!=NULL) {
+        printf("%i ->",node->data);
+        node=node->prev;
+    }
+    printf("NULL\n");
+}

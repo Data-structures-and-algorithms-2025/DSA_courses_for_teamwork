@@ -26,7 +26,7 @@ Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredm
     scanf("%i%i%i",&num1,&num2,&num3);
     insertAtEnd(&head,num1);
     insertAtEnd(&head,num2);
-    insertAtEnd(&head,num2);
+    insertAtEnd(&head,num3);
     printListFromEnd(head);
 
     //3.
@@ -42,6 +42,7 @@ Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredm
     printf("Add meg a szamot(num5): ");
     scanf("%i",&num5);
     insertAfter(head->next,num5);
+    printListFromBegin(head);
 
     //5.
     if (isEmpty(head)) {
