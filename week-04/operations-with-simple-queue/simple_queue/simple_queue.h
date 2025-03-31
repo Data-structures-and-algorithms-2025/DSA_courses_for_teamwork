@@ -1,7 +1,6 @@
 //
 // Created by oszti on 3/23/2025.
 //
-
 #ifndef SIMPLE_QUEUE_H
 #define SIMPLE_QUEUE_H
 typedef struct {
