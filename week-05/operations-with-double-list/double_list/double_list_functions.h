@@ -1,3 +1,4 @@
+#include <stdbool.h>
 
 #ifndef DOUBLE_LIST_FUNCTIONS_H
 #define DOUBLE_LIST_FUNCTIONS_H
