@@ -7,10 +7,7 @@
 #include <stdbool.h>
 #include "simple_list_functions.h"
 
-typedef struct Node {
-    int data;
-    struct Node* next;
-} Node;
+
 
 Node* newNode(int new_data) {
     Node* node = (Node*)malloc(sizeof(Node));
@@ -63,4 +60,3 @@ void printList(Node* head) {
     }
     printf("NULL\n");
 }
-//
