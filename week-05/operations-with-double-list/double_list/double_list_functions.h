@@ -44,10 +44,6 @@ void insertAfter(Node* prev_ref, int new_data);
  */
 void insertAtEnd(Node** head_ref, int new_data);
 /**
- * Prints the elements of the circular linked list
- * @param head Pointer to the head of the list
- */
-/**
  * Prints the elements of the doubly linked list from the beginning (head)
  * @param head Pointer to the head of the list
  */
