@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "double_list_functions.h"
 
 int main(void) {
@@ -23,9 +24,9 @@ Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredm
     Node* second = head->next->next;
     insertAfter(second, 25);
     if (isEmpty(head)) {
-        printf("A lista üres.\n");
+        printf("A lista ures.\n");
     } else {
-        printf("A lista nem üres.\n");
+        printf("A lista nem ures.\n");
     }
     printListFromBegin(head);
     printListFromEnd(head);
