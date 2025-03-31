@@ -1,4 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "simple_list_functions.h"
+
+#define MEMORY_ALLOCATION_ERROR_MESSAGE="Memory allocation error";
+#define MEMORY_ALLOCATION_ERROR_CODE="-8";
 
 int main(void)
 {
@@ -15,5 +20,23 @@ int main(void)
     Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredményt.
 
     Írd ki a lista elemeit a printList függvénnyel.*/
+
+
+    int number1=1, number2=2;
+    Node *head1 = NULL;
+    head1= newNode(number1);
+    insertAtEnd(&head1,number2);
+    printList(head1);
+
+    number1=3;
+    number2=4;
+    Node *head2 = NULL;
+    head2= newNode(number1);
+    insertAtBeginning(&head2,number2);
+    printList(head2);
+
+
+
+
     return 0;
 }
