@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "double_list_functions.h"
 
 int main(void)
 {
@@ -15,4 +16,15 @@ Adj hozzá egy elemet egy adott elem után a insertAfter függvény használatá
 Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredményt.
 
 Írd ki a lista elemeit mindkét irányból.*/
+
+    Node *head = NULL;
+    Node *node1;
+    insertAtEnd(&head,1);
+    insertAtEnd(&head,2);
+    insertAtEnd(&head,3);
+    insertAtBeginning(&head,4);
+    insertAfter(head,5);
+    isEmpty(head) ? printf("A lista ures!!\n") : printf("A lista nem ures!\n");
+    printListFromBegin(head);
+    printListFromEnd(head);
 }
