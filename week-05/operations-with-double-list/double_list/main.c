@@ -18,7 +18,6 @@ Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredm
 Írd ki a lista elemeit mindkét irányból.*/
 
     Node *head = NULL;
-    Node *node1;
     insertAtEnd(&head,1);
     insertAtEnd(&head,2);
     insertAtEnd(&head,3);
