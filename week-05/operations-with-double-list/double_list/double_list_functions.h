@@ -1,12 +1,9 @@
-//
-// Created by oszti on 3/30/2025.
-//
 
 #ifndef DOUBLE_LIST_FUNCTIONS_H
 #define DOUBLE_LIST_FUNCTIONS_H
 typedef struct Node{
     int data;
-    struct Node* next, *prev;
+    struct Node * next, *prev;
 }Node;
 
 /**
