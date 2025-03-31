@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "double_list_functions.h"
 
 int main(void)
 {
@@ -15,4 +16,6 @@ Adj hozzá egy elemet egy adott elem után a insertAfter függvény használatá
 Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredményt.
 
 Írd ki a lista elemeit mindkét irányból.*/
+
+
 }
