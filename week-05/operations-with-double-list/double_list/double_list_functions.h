@@ -1,12 +1,10 @@
-//
-// Created by oszti on 3/30/2025.
-//
+#include <stdbool.h>
 
 #ifndef DOUBLE_LIST_FUNCTIONS_H
 #define DOUBLE_LIST_FUNCTIONS_H
 typedef struct Node{
     int data;
-    struct Node* next, *prev;
+    struct Node * next, *prev;
 }Node;
 
 /**
@@ -57,7 +55,7 @@ void printListFromBegin(Node* head);
  * Prints the elements of the doubly linked list from the end (tail)
  * @param head Pointer to the head of the list
  */
-void printListFromEnd(Node *node)
+void printListFromEnd(Node *node);
 
 
 #endif //DOUBLE_LIST_FUNCTIONS_H
