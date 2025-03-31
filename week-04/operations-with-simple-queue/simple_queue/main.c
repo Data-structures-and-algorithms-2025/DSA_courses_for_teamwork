@@ -1,5 +1,8 @@
 #include <stdio.h>
+
+#include "simple_queue.h"
 #define MAX_CAPACITY 5
+
 int main(void)
 {
     /*
@@ -10,29 +13,33 @@ int main(void)
 5.  Mennyi lesz a sorban található elemek összege a leírt műveletek elvégzése után?
 Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használhatod.*/
 
-    int queue[MAX_CAPACITY];
-    int front = 0, rear = -1;
+    Simple_Queue_t queue;
+    createQueue(5, &queue);
 
-    int numbers[] = {10, 20, 30, 40, 50};
+    enqueue(&queue, 10);
+    enqueue(&queue, 20);
+    enqueue(&queue, 30);
+    enqueue(&queue, 40);
+    enqueue(&queue, 50);
 
-    for (int i = 0; i < 5; i++) {
-        if (rear < MAX_CAPACITY - 1) {
-            rear++;
-            queue[rear] = numbers[i];
-        } else {
-            printf("A sor megtelt!\n");
-        }
+    dequeue(&queue);
+    dequeue(&queue);
+
+    enqueue(&queue, 60);
+    enqueue(&queue, 70);
+    enqueue(&queue, 80);
+
+    dequeue(&queue);
+
+    printf("A sor elején lévő szám: %d\n", peek(queue));
+
+    int sum = 0;
+    for (int i = queue.front; i <= queue.rear; i++) {
+        sum += queue.elements[i];
     }
-    enqueue(60);
-    enqueue(70);
-    enqueue(80);  /
-
-    dequeue();
-
-    printf("A sor elején lévő szám: %d\n", queue[front]);
-
-    int sum = calculate_sum();
-    printf("A sorban található elemek összege: %d\n", sum);
+    printf("A sorban lévő elemek összege: %d\n", sum);
+    
+    destroyQueue(&queue);
 
     return 0;
 }
