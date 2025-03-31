@@ -24,7 +24,6 @@ void insertAtBeginning(Node **head_ref, int new_data) {
     newNode1->next=*head_ref;
     newNode1->prev=NULL;
     (*head_ref)->prev=newNode1;
-    newNode1->data=new_data;
     *head_ref=newNode1;
 }
 
@@ -57,10 +56,13 @@ void printListFromBegin(Node *head) {
     }
 }
 
-void printListFromEnd(Node *node) {
-    while (node!=NULL) {
-        printf("%d ", node->data);
-        node=node->prev;
+void printListFromEnd(Node *head) {
+    while (head->next!=NULL) {
+        head=head->next;
+    }
+    while (head!=NULL) {
+        printf("%d ", head->data);
+        head=head->prev;
     }
 }
 

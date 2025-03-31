@@ -17,7 +17,7 @@ Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredm
 
 Írd ki a lista elemeit mindkét irányból.*/
 
-    Node *head = NULL;
+    Node *head = newNode(0);
     insertAtEnd(&head,1);
     insertAtEnd(&head,2);
     insertAtEnd(&head,3);
@@ -25,5 +25,6 @@ Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredm
     insertAfter(head,5);
     isEmpty(head) ? printf("A lista ures!!\n") : printf("A lista nem ures!\n");
     printListFromBegin(head);
+    printf("\n");
     printListFromEnd(head);
 }
