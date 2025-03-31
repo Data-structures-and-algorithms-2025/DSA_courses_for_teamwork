@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "simple_list_functions.h"
 int main(void)
 {
     /*Írj egy programot, amely az alábbi lépéseket hajtja végre az egyszeresen láncolt listán:
@@ -15,5 +15,13 @@ int main(void)
     Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredményt.
 
     Írd ki a lista elemeit a printList függvénnyel.*/
+    Node *n=newNode(5);
+    insertAtEnd(&n, 6);
+    insertAtEnd(&n, 8);
+    insertAtBeginning(&n, 1);
+    insertAfter(n->next, 9);
+    printList(n);
+    if (isEmpty(n)){printf("Ures.");}
+    else{printf("Nem ures!");}
     return 0;
 }
