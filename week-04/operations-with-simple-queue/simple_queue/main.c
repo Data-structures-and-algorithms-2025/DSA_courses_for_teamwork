@@ -23,6 +23,16 @@ Megjegyzes: A sort nem szabad bejárni, csak a megfelelő műveleteket használh
             printf("A sor megtelt!\n");
         }
     }
+    enqueue(60);
+    enqueue(70);
+    enqueue(80);  /
+
+    dequeue();
+
+    printf("A sor elején lévő szám: %d\n", queue[front]);
+
+    int sum = calculate_sum();
+    printf("A sorban található elemek összege: %d\n", sum);
 
     return 0;
 }
