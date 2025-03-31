@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "double_list_functions.h"
 int main(void)
 {
     /*Írj egy programot, amely az alábbi lépéseket hajtja végre az egyszeresen láncolt listán:
@@ -15,4 +15,28 @@ Adj hozzá egy elemet egy adott elem után a insertAfter függvény használatá
 Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredményt.
 
 Írd ki a lista elemeit mindkét irányból.*/
+    Node* head = NULL;
+
+    insertAtEnd(&head, 10);
+    insertAtEnd(&head, 20);
+    insertAtEnd(&head, 30);
+
+    insertAtBeginning(&head, 5);
+
+    Node* second = head->next;
+    if (second != NULL) {
+        insertAfter(second, 15);
+    }
+
+    if (isEmpty(head)) {
+        printf("The list is empty.\n");
+    } else {
+        printf("The list is not empty.\n");
+    }
+
+    printf("List from beginning: ");
+    printListFromBegin(head);
+
+    printf("List from end: ");
+    printListFromEnd(head);
 }
