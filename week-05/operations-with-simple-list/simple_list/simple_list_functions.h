@@ -47,6 +47,6 @@ void insertAtEnd(Node** head_ref, int new_data);
  * Prints the elements of the linked list
  * @param head Pointer to the head of the list
  */
-void printList(Node* head);
+void printList(Node* *head_ref);
 
 #endif //SIMPLE_LIST_FUNCTIONS_H
