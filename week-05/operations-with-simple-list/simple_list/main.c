@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "simple_list_functions.h"
 
 int main(void)
 {
@@ -15,5 +16,17 @@ int main(void)
     Ellenőrizd, hogy a lista üres-e az isEmpty függvénnyel, és írd ki az eredményt.
 
     Írd ki a lista elemeit a printList függvénnyel.*/
+
+    Node list;
+
+    insertAtBeginning(&list,0);
+    insertAtBeginning(&list,1);
+    insertAtBeginning(&list,2);
+    insertAtBeginning(&list,3);
+    if(isEmpty(&list)) {
+        printf("List is empty\n");
+    }
+    printList(&list);
+
     return 0;
 }
