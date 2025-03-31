@@ -48,8 +48,58 @@ void insertAfter(Node* prev_ref, int new_data)
 
     Node* new_node=newNode(new_data);
 
-    if(prev_ref->next == NULL)
+    new_node->next=prev_ref->next;
+    if(prev_ref->next != NULL)
     {
-        new_node->next=prev_ref;
+        prev_ref->next->prev = new_node;
     }
+
+    prev_ref->next = new_node;
+    new_node->prev=prev_ref;
+}
+
+void insertAtEnd(Node** head_ref, int new_data)
+{
+    if(isEmpty(*head_ref))
+    {
+        *head_ref=newNode(new_data);
+        return;
+    }
+
+    Node *temp = *head_ref,*last;
+
+    while(temp->next != NULL)
+    {
+        temp = temp->next;
+    }
+    last = newNode(new_data);
+    temp->next = last;
+    last->prev = temp;
+}
+
+void printListFromBegin(Node* head)
+{
+    Node *temp = head;
+    while(temp !=NULL)
+    {
+        printf("%i ",temp->data);
+        temp = temp->next;
+    }
+    printf("NULL \n");
+}
+
+void printListFromEnd(Node *node)
+{
+    Node* temp = node;
+    while(temp->next!=NULL)
+    {
+        temp=temp->next;
+    }
+
+    while(temp != NULL)
+    {
+        printf("%i ",temp->data);
+        temp=temp->prev;
+    }
+    printf("NULL \n");
 }
