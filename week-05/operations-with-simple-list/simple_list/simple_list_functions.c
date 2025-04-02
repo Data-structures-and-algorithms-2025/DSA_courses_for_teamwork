@@ -10,7 +10,7 @@ Node *newNode(int new_data) {
     Node* new_node = (Node*)malloc(sizeof(Node));
     if(!new_node) {
         printf("MEMORY_ALLOCATION_ERROR_MESSAGE");
-        exit("MEMORY_ALLOCATION_ERROR_CODE");
+        exit(-6);
     }
     new_node->data = new_data;
     new_node->next = NULL;
