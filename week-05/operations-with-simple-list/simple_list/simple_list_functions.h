@@ -4,6 +4,7 @@
 
 #ifndef SIMPLE_LIST_FUNCTIONS_H
 #define SIMPLE_LIST_FUNCTIONS_H
+#include <stdbool.h>
 typedef struct Node{
     int data;
     struct Node* next;
