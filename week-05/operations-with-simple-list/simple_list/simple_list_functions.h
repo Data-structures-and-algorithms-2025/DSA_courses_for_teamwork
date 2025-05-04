@@ -50,4 +50,36 @@ void insertAtEnd(Node** head_ref, int new_data);
  */
 void printList(Node* head);
 
+/**
+ * Deletes the first node
+ * @param head_ref
+ */
+void deleteFromBeginning(Node** head_ref);
+
+/**
+ * Deletes the last node
+ * @param head_ref
+ */
+void deleteFromEnd(Node** head_ref);
+
+/**
+ * Deletes a specific node
+ * @param head_ref
+ * @param key;
+ */
+void deleteNode(Node** head_ref, int key);
+
+/**
+ * Searches for a specific node with value key
+ * @param head_ref
+ * @param key
+ * @return
+ */
+bool searchNode(Node* head_ref, int key);
+/**
+ * deallocates memory
+ * @param head
+ */
+void freeList(Node **head);
+
 #endif //SIMPLE_LIST_FUNCTIONS_H
