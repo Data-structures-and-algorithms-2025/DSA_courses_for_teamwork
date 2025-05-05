@@ -46,3 +46,79 @@ void printList(Node* node) {
         node = node->next;
     }
 }
+
+
+void deleteFromBeginning(Node **head_ref) {
+    if(isEmpty(*head_ref))
+    {
+        printf("NULL_POINTER_EXCEPTION_ERROR_MESSAGE");
+        return;
+    }
+    Node *temp = *head_ref;
+    *head_ref = (*head_ref)->next;
+    free(temp);
+}
+
+void deleteNode(Node **head_ref, int key) {
+    if(isEmpty(*head_ref))
+    {
+        printf("NULL_POINTER_EXCEPTION_ERROR_MESSAGE");
+        return;
+    }
+    if((*head_ref)->data == key)
+    {
+        deleteFromBeginning(head_ref);
+        return;
+    }
+    Node *temp = (*head_ref)->next;
+    Node *prev = (*head_ref);
+    while (temp != NULL && temp->data != key)
+    {
+        prev = temp;
+        temp = temp->next;
+    }
+    if(temp != NULL)
+    {
+        prev->next = temp->next;
+        free(temp);
+    }
+}
+
+void deleteFromEnd(Node **head_ref) {
+    if(isEmpty(*head_ref))
+    {
+        printf("NULL_POINTER_EXCEPTION_ERROR_MESSAGE");
+        return;
+    }
+    if((*head_ref)->next == NULL)
+    {
+        free(*head_ref);
+        *head_ref = NULL;
+        return;
+    }
+    Node *temp = *head_ref;
+    while (temp->next->next != NULL)
+    {
+        temp = temp->next;
+    }
+    free(temp->next);
+    temp->next = NULL;
+}
+bool searchNode(Node *head_ref, int key) {
+    Node *temp = head_ref;
+    while(temp != NULL)
+    {
+        if(temp->data == key) return true;
+        temp = temp->next;
+    }
+    return false;
+}
+void freeList(Node **head) {
+    while(*head != NULL)
+    {
+        Node *temp = *head;
+        *head = (*head)->next;
+        free(temp);
+    }
+    *head = NULL;
+}
