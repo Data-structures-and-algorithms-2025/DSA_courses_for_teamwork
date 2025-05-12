@@ -41,7 +41,7 @@ void insert(HashTable *hashTable, int key, int data) {
 }
 
 void display(HashTable hashTable) {
-    if(0) {//TODO
+    if(!hashTable.size) {
         printf("The table is empty\n");
         return;
     }
@@ -96,7 +96,7 @@ int search(HashTable hashTable, int key) {
 }
 
 void destroyHashArray(HashTable *pHashTable) {
-    pHashTable->size = CAPACITY;//TODO
+    pHashTable->size = 0;
     free(pHashTable->items);
     pHashTable = NULL;
 }
