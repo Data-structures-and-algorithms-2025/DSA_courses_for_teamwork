@@ -5,6 +5,7 @@
 
 
 #include "hash_table.h"
+#include "double_list_functions.h"
 
 int hashCode(int key) {
     return key % CAPACITY;
@@ -12,18 +13,18 @@ int hashCode(int key) {
 
 HashItem createHashItem(int key, int data)
 {
-    HashItem item = {};//TODO
+    HashItem item = {key,data};
     return item;
 }
 void createHashArray(HashTable *pHashTable) {
-    pHashTable->items = (HashItem*)calloc(1, sizeof(HashItem));//TODO
+    pHashTable->items = (HashItem*)calloc(CAPACITY, sizeof(HashItem));
     if(!pHashTable->items)
     {
         printf(MEMORY_ALLOCATION_ERROR_MESSAGE);
         exit(MEMORY_ALLOCATION_ERROR_CODE);
     }
     for (int i = 0; i < CAPACITY; ++i) {
-        {};//TODO
+        {};
     }
     pHashTable->size = 0;
 }
