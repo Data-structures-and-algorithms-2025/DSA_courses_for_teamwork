@@ -7,26 +7,36 @@
 #ifndef HASH_STATIC_HASH_TABLE_H
 #define HASH_STATIC_HASH_TABLE_H
 
+//ennyi item lehet a hasitotablan
 #define CAPACITY 31
 
+
+//ez az actual item amikbol van tobb a tablan
 typedef struct {
     int key;
     int data;
 } HashItem;
 
+
+//ez maga a tabla
 typedef struct {
     HashItem *items;
-    int size;
+    int size; // kurrens itemek
 }HashTable;
 
+//ez arra van, hogyha kitorlok egy itemet
 static HashItem dummyData = {-1, 0};
-/**
- * Allocates memory for a hash table with defined SIZE
- * @param pHashTable
- */
-void createHashArray(HashTable *pHashTable);
+
+
+//Ez lenne a deklaracioja az hash functionnak, de mivel azt
+// tilos a mainbe hasznalni, nincs itt deklaralva, mert csak a c file hasznalhatja
 //This should be only accessible in the .c file
 //int hashCode(int key);
+
+//Ez megcsinalja a tablat
+void createHashArray(HashTable *pHashTable);
+
+
 /**
  * Inserts a new data to the hashArray
  * @param hashTable

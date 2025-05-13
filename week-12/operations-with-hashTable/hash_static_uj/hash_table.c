@@ -15,33 +15,36 @@ HashItem createHashItem(int key, int data)
     HashItem item = {};//TODO
     return item;
 }
+
 void createHashArray(HashTable *pHashTable) {
-    pHashTable->items = (HashItem*)calloc(1, sizeof(HashItem));//TODO
+    pHashTable->items = (HashItem*)calloc(CAPACITY, sizeof(HashItem));//TODO
     if(!pHashTable->items)
     {
         printf(MEMORY_ALLOCATION_ERROR_MESSAGE);
         exit(MEMORY_ALLOCATION_ERROR_CODE);
     }
     for (int i = 0; i < CAPACITY; ++i) {
-        {};//TODO
+        {
+            pHashTable->items[i].key=-1;
+        };//TODO
     }
     pHashTable->size = 0;
 }
 
 void insert(HashTable *hashTable, int key, int data) {
     if(hashTable->size >= CAPACITY) return;
-    int index = 0;//TODO
+    int index = hashCode(key);//TODO
     int i = 0;
     while (hashTable->items[(index + i)%CAPACITY].key != dummyData.key)
     {
-        {};//TODO
+       i++;//TODO
     }
     hashTable->items[(index+i)%CAPACITY] = createHashItem(key, data);
     hashTable->size++;
 }
 
 void display(HashTable hashTable) {
-    if(0) {//TODO
+    if(hashTable.size==0) {//TODO
         printf("The table is empty\n");
         return;
     }
@@ -96,9 +99,9 @@ int search(HashTable hashTable, int key) {
 }
 
 void destroyHashArray(HashTable *pHashTable) {
-    pHashTable->size = CAPACITY;//TODO
+    pHashTable->size = 0;//TODO
     free(pHashTable->items);
-    pHashTable = NULL;
+    pHashTable->items= NULL;
 }
 
 
