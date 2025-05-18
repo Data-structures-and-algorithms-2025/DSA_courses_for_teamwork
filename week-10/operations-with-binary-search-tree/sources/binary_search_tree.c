@@ -104,8 +104,8 @@ Node *deleteNode(Node *root, int key) {
         //Node *temp = minValueNode(root->right);
         Node *temp = maxValueNode(root->left);
         root->info = temp->info;
-        //deleteNode(root->right, temp->info);
-        deleteNode(root->left, temp->info);
+        //root->right = deleteNode(root->right, temp->info);
+        root->left = deleteNode(root->left, temp->info);
     }
     return root;
 
