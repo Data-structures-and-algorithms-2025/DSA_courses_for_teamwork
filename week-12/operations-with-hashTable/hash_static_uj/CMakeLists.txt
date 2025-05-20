@@ -3,4 +3,4 @@ project(hash_static C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(hash_static_uj main.c hash_table.c hash_table.h)
+add_executable(hash_static_uj main.c hash_table.c hash_table.h double_list_functions.c double_list_functions.h)
