@@ -32,7 +32,7 @@ void insert(HashTable *hashTable, int key, int data) {
     if(hashTable->size >= CAPACITY) return;
     int index = hashCode(key);
     int i = 0;
-    while (hashTable->items[(index + i)%CAPACITY].key != dummyData.key && hashTable->items[(index + i) % CAPACITY].key != -1)
+    while (hashTable->items[(index + i)%CAPACITY].key != dummyData.key)
     {
         i++;
         if (i == CAPACITY)
@@ -96,7 +96,7 @@ int search(HashTable hashTable, int key) {
         i++;
     }
     if(i == CAPACITY) return -1;
-    return index;
+    return (index + i) % CAPACITY;
 }
 
 void destroyHashArray(HashTable *pHashTable) {
